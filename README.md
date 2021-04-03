@@ -29,6 +29,8 @@ We chose to use OCaml for our final project because we thought that the idea of 
 - These sentences will take the form "adjective" + "noun" +  "verb phrase". The verb phrase will consist of either simply an intransitive verb or an transitive verb with another noun. The nouns and verbs and their classifications come from part two. 
 - Once the tweet is constructed, this section is complete. Pass on the tweet to part 4 to be posted. 
 ### Part Four - Posting a Fake Tweet (5 points)
+- Hopefully the work done in Part One should make this section relatively straight forward. The objective is to take the newly constructured tweet from Part Three and actually post the tweet to Twitter. 
+- Again here is the [Twitter API](https://developer.twitter.com/en/docs/twitter-api/api-reference-index), the important compenent will be the POST statuses update endpoint. 
 
 ## Work Breakdown
 ### Everyone
