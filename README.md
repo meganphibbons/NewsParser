@@ -4,14 +4,14 @@
 ### General Project Idea
 We chose to use OCaml for our final project because we thought that the idea of parsing would be really interesting and tricky to navigate. Additionally, we thought that it would be beneficial to compare how OCaml parsing works in comparison to something like Scheme, where we used features of the language to parse the language itself. 
 
-### Strenghts of OCaml
-- For one, OCaml has a lot of parsing functionality and is well-known for the ease in which you can parse
-- OCaml is so good at parsing due to its exhaustivity checking and strong typing
-- Additionally, OCaml allows the use of pattern-matching in function definitions, meaning we can check for matches in a function definition easily. 
-- Lastly, OCaml is very efficient in its implementation, making it a good language for a project that requires parsing a lot of data. 
+### Strengths of OCaml
+- For one, OCaml is well-known for the ease in which you can parse
+- OCaml is so good at parsing in part due to its exhaustivity checking (making sure all cases are covered)
+- Additionally, OCaml allows the use of pattern-matching in function definitions, which will help with writing parse functions
+- Lastly, OCaml is a compiled language with a very efficient implementation, making it a good language for a project that requires parsing through a lot of data. 
 
 ### Weaknesses of OCaml
-- In terms of the Twitter network calls, the code may not actually be efficient, because OCaml is not thread safe and the threads do not run in parallel.  
+- In terms of the Twitter network calls, the code may not actually be efficient, because OCaml is not inherently thread safe and the threads do not run in parallel.  
     - That being said, upon doing some research, it seems that there are a few libraries that could be useful for making network calls that would improve performance and make this a bit easier. 
 - More generally, it appears that the standard library is pretty limited, memory management isn't great, and sometimes there is unnecessary boxing of data types. 
 
