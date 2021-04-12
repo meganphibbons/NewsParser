@@ -1,0 +1,4 @@
+(executable
+ (public_name TwitterParser)
+ (name main)
+ (libraries TwitterParser))
