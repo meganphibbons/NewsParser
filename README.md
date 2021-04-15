@@ -27,9 +27,9 @@ We chose to use OCaml for our final project because we thought that the idea of 
 - After extracting the data itself, it is necessary to process the data and put it into a useful format. To do this, figure out which words show up the most across all tweets under a given Hashtag, ranking them based on importance (number of keywords, potentially number of likes that posts with those keywords get) and determine what the main ideas of the hashtag are. 
 - Once you have an ordered list of relevant keywords, this section should be complete! Pass on these keywords to part 3 to generate some potential fake tweets. 
 ### Part Three - Generating Fake Tweets Using Data (20 points)
-- The main purpose of this part of the project is to utilize the ordered list generated in part two to create reasonably realistic tweets that would logically align with the hashtag.  
-- These sentences will take the form "adjective" + "noun" +  "verb phrase". The verb phrase will consist of either simply an intransitive verb or an transitive verb with another noun. The nouns and verbs and their classifications come from part two. 
-- Once the tweet is constructed, this section is complete. Pass on the tweet to part 4 to be posted. 
+- The main purpose of this part of the project is to visualize the data from Part 2.  
+- Given the tree generated from part 2, the tree will be converted to dot language, which can be visuzlied with the GraphViz library. 
+- Once the tree is visualized, this section is complete. 
 ### Part Four - Posting a Fake Tweet (5 points)
 - Hopefully the work done in Part One should make this section relatively straight forward. The objective is to take the newly constructured tweet from Part Three and actually post the tweet to Twitter. 
 - Again here is the [Twitter API](https://developer.twitter.com/en/docs/twitter-api/api-reference-index), the important compenent will be the POST statuses update endpoint. 
