@@ -2,10 +2,10 @@
 # OCAMLPARAM: unset
 # Workspace root:
 # /Users/meganphibbons/Documents/School/390/FinalProject/NewsParser
-$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/hc/5_db2trx0ssc7lyr1fdt5qlw0000gn/T/dune6e29a4.output 2> /dev/null
+$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/hc/5_db2trx0ssc7lyr1fdt5qlw0000gn/T/dune0ca8ae.output 2> /dev/null
 # Auto-detected concurrency: 8
 # disable binary cache
-$ /Users/meganphibbons/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/hc/5_db2trx0ssc7lyr1fdt5qlw0000gn/T/dunef59d89.output
+$ /Users/meganphibbons/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/hc/5_db2trx0ssc7lyr1fdt5qlw0000gn/T/dune82ab1d.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
