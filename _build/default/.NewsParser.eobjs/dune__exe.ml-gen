@@ -1,0 +1,6 @@
+(** @canonical Dune__exe.NewsParser *)
+module NewsParser = Dune__exe__NewsParser
+
+
+(** @canonical Dune__exe.Tokens *)
+module Tokens = Dune__exe__Tokens
