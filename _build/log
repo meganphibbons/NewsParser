@@ -1,11 +1,11 @@
-# dune exec ./TwitterParser.exe
+# dune exec ./NewsParser.exe
 # OCAMLPARAM: unset
 # Workspace root:
 # /Users/meganphibbons/Documents/School/390/FinalProject/TwitterParser
-$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/hc/5_db2trx0ssc7lyr1fdt5qlw0000gn/T/dune9aff81.output 2> /dev/null
+$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/hc/5_db2trx0ssc7lyr1fdt5qlw0000gn/T/dune43b9e2.output 2> /dev/null
 # Auto-detected concurrency: 8
 # disable binary cache
-$ /Users/meganphibbons/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/hc/5_db2trx0ssc7lyr1fdt5qlw0000gn/T/dune6bb36b.output
+$ /Users/meganphibbons/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/hc/5_db2trx0ssc7lyr1fdt5qlw0000gn/T/duned4af97.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"

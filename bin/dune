@@ -1,4 +1,4 @@
 (executable
- (public_name TwitterParser)
+ (public_name NewsParser)
  (name main)
- (libraries TwitterParser))
+ (libraries NewsParser))
