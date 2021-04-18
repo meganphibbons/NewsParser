@@ -1,39 +1,22 @@
-# TwitterParser API
+# NewsParser API
 
 ## General Workflow
-- User inputs a hashtag to search
-- Dorian somehow gets that data (from database or Twitter)
-- Megan parses the json and just keep the tweet itself
-- Megan summarizes the data of the tweet
-- Annie gets the tweet summary and uses it for words that should potentially be included, then makes a phrase out of them 
+- Dorian gets a random article using the HackerNews API
+- Megan parses the json to see if it's a comment or article 
+- Dorian traverses up until finding the original post
+- Megan summarizes the data of the article and its children 
+- Annie gets the summary and raw data and uses them to generate a visualization
 
 
 ## Data Fetching
-- Input: String (hashtag) Output: String: (json file contents)
+- Input: random number (or nothing) Output: String: (json file contents in String format)
 
 ## Parsing 
-- .getKeywords() Input: String (json file) Output: List (common keywords for this tweet)
-- .getTweets() Input: String (json file) Output: List of tweets
+- .isPost() or .isComment() Input: json file in String format Output: true/false
+- .getRawContents() Input: json file in String format. Output: HTML file in String format
+- .getKeywords() Input: String (HTML file) Output: List (common keywords for this data)
+- .getParsedContents() Input: HTML file in String format. Output: raw data without any HTML text
 
-## Tweet Generation 
-- .makeMap() Input: List of Strings (tweets) output: the map itself Create the map of words to what follow them 
-- Input: the map Output: the generated tweet Actually generate the tweet based on what follows them 
-
-## Tweet Posting 
-- Input: the tweet Output: "successful" 
-
-## Timeline
-- Create the slides file Sun Apr 11 
-- Push the OCaml project structure by Apr 11 
-- Lecture Materials done by Wednesday
-    - Slides 
-    - Live coding example
-    - Resources to learn more
-- Goal to have code done by the 20th
-- Integration will happen between the 20th and 23rd
-
-## Presentation Notes:
-- Talk about Exhaustivity Checking (Annie) and pattern matching in function definitions (Megan)
-- Use parsing as our real-world example 
-- OCaml yacc (Dorian) as an example of a command that creates a parser from a grammar specification
-- Live coding (all 3) 
+## GraphViz Generation
+- .makeGraphInput() Input: Raw data without HTML. Output: The input to make the graph with GraphViz
+- .makeGraph() Input: graphViz input. Output: the actual graph created 
