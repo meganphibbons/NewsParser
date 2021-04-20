@@ -1,4 +1,5 @@
 open Tokens
+open KeywordGenerator
 
 exception NoneOptionError of string
 exception BadListError of string
@@ -158,6 +159,7 @@ let () =
   (print_json (parse json1));
   print_string "\n JSON 2 Data:\n";
   (print_json (parse json2));
+  (generate_keywords (unwrap (parse json2).title))
   (* Test Tokenizer: print_list (rev_list (tokenize json)) *)
 ;;
 

@@ -1,3 +1,7 @@
+(** @canonical Dune__exe.KeywordGenerator *)
+module KeywordGenerator = Dune__exe__KeywordGenerator
+
+
 (** @canonical Dune__exe.NewsParser *)
 module NewsParser = Dune__exe__NewsParser
 

@@ -1,3 +1,8 @@
+exception InputError of string
+
+(* List of all possible tokens - the first half (INT - COMMA) are general tokens for things
+   that can show up in a JSON file. The second half (ID - DESCENDANTS) are tokens specific to 
+   keywords that will show up in the HackerNews JSON. *)
 type tokens = 
   INT of int |
   FLOAT of float |
@@ -28,6 +33,7 @@ type tokens =
   DESCENDANTS
 ;;
 
+(* Converting to Strings so we can print for testing purposes *)
 let string_of_token = function
 | INT a -> string_of_int a
 | FLOAT a -> string_of_float a
@@ -57,9 +63,10 @@ let string_of_token = function
 | PARTS -> "parts"
 | DESCENDANTS -> "descendants"
 
+(* Regular expressions to match the general terms *)
 let int_reg = "[0-9]+"
 let float_reg = "[0-9]+\\.[0-9]+"
-let string_reg = "\"[^\"\\\\]*\\(\\\\.[^\"\\\\]*\\)*\""
+let string_reg = "\"[^\"\\\\]*\\(\\\\.[^\"\\\\]*\\)*\"" (* Full disclosure - modified from StackOverflow *)
 let true_reg = "true"
 let false_reg = "false"
 let null_reg = "null"
@@ -70,6 +77,7 @@ let rsq_reg = "\\]"
 let colon_reg = ":"
 let comma_reg = ","
 
+(* Regular expressions for keywords in json file *)
 let id_reg = "\"id\""
 let deleted_reg = "\"deleted\""
 let type_reg = "\"type\""
@@ -86,8 +94,12 @@ let title_reg = "\"title\""
 let parts_reg = "\"parts\""
 let descendants_reg = "\"descendants\""
 
+(* Whitespace for the actual tokenize function *)
 let whitespace = Str.regexp " \\|\n\\|\t"
 
+(* Used to map the regular expression to a function that converts a string to a token
+   int, float, and string are all special because we save the actual data rather than noting the
+   existence of a keyword/symbol *)
 let int_func value = 
   INT(int_of_string(value))
 ;;
@@ -104,6 +116,7 @@ let token_func token_type _ =
   token_type
 ;;
 
+(* Actually map from the regular expression to the token functions listed above *)
 let token_map = 
   [
     (Str.regexp id_reg, token_func ID);
@@ -135,6 +148,8 @@ let token_map =
     (Str.regexp string_reg, string_func); 
   ]
 
+(* Find the max length of a token so we ensure that we get the largest possible token and don't
+   accidentally stop reading on something that matches sooner *)
 let max_token index json (longest, token) (regex, current_token_func) =  
   if Str.string_match regex json index then 
     let matched = Str.matched_string json in 
@@ -144,8 +159,8 @@ let max_token index json (longest, token) (regex, current_token_func) =
     else (longest, token)
   else (longest, token)
 
-exception InputError of string
-
+(* This is the main function to call from this file - tokenie will take in raw json text and
+   return a list of tokens to parse. *)
 let tokenize json = 
   let rec tokenize index acc = 
     if index >= (String.length json) then acc
