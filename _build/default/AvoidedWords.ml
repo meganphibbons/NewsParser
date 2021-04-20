@@ -124,4 +124,16 @@ let avoided = [
   "";
   "just";
   "a";
+  "what";
+  "what's";
+  "whose";
+  "still";
+  "i'm";
+  "lot";
+  "make";
+  "makes";
+  "have";
+  "haves";
+  "keep";
+  "keeps";
 ]
