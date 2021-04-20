@@ -1,1 +1,1 @@
-NewsParser.ml: Tokens
+NewsParser.ml: List Tokens

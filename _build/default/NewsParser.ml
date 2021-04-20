@@ -21,6 +21,8 @@ type json_data =
   (* parts: int list option; *)
 
   exception NoneOptionError of string
+  exception BadListError of string
+  exception BadTokenError of string
 
 let rec next token_check = function 
   | [] -> (raise (InputError "Bad JSON Formatting - empty"))
@@ -28,12 +30,37 @@ let rec next token_check = function
   | _ -> (raise (InputError "Bad JSON Formatting - tokens in bad format"))
 ;;
 
+
 let unwrap opt = 
   match opt with
   | Some a -> a
   | None -> (raise (NoneOptionError "Option shouldn't be None here"))
+;;
 
-  let rec populate_json curr_json_rec = function  
+let rec make_list curr_list = function 
+  | [] -> (raise (BadListError "Make sure your list is surrounded by brackets!"))
+  | h::t when h = LEFT_SQUARE -> (raise (BadListError "Shouldn't have another bracket"))
+  | h::t when h = RIGHT_SQUARE -> (curr_list, t);
+  | h::t when h = COMMA -> make_list curr_list t;
+  | h::t -> make_list (h::curr_list) t;
+  | _ -> (raise (BadListError "Shouldn't reach this catch-all for lists"))
+;;
+
+let rec print_list = function 
+    | [] -> ()
+    | e::l -> print_string (string_of_token e) ; print_string "\n" ; print_list l
+;;
+
+let rec print_int_list = function 
+    | [] -> ()
+    | e::l -> print_string (string_of_int e) ; print_string ", " ; print_int_list l
+;;
+
+let int_of_token = function
+  | INT(t) -> t
+  | _ -> (raise (BadTokenError "not an int"))
+
+let rec populate_json curr_json_rec = function  
   | [] -> curr_json_rec
   | h::t when h = ID -> 
     let INT(nh)::nt = (next COLON t) in 
@@ -47,7 +74,10 @@ let unwrap opt =
   | h::t when h = PARENT ->
     let INT(nh)::nt = (next COLON t) in 
     (populate_json ({curr_json_rec with parent = Some(nh)}) nt)
-  (* | h::t when h = KIDS -> TODO: I am too lazy for this right now *)
+  | h::t when h = KIDS -> 
+    let nh::nt = (next COLON t) in 
+    let (int_list, remaining) = make_list [] nt in
+    (populate_json ({curr_json_rec with kids = Some(List.map int_of_token int_list)}) remaining)
   | h::t when h = TITLE ->
     let STRING(nh)::nt = (next COLON t) in 
     (populate_json ({curr_json_rec with title = Some(nh)}) nt)
@@ -63,14 +93,9 @@ let print_json json =
   print_string "post type: "; if(json.post_type <> None) then print_string (unwrap json.post_type); print_string "\n"; 
   print_string "text: "; if(json.text <> None) then print_string (unwrap json.text); print_string "\n"; 
   print_string "parent: "; if(json.parent <> None) then print_int (unwrap json.parent); print_string "\n"; 
-  (* if(json.kids <> None) then print_string "kids: "; print_int (unwrap json.kids); print_string "\n";  *)
+  print_string "kids: "; if(json.kids <> None) then print_int_list (unwrap json.kids); print_string "\n"; 
   print_string "title: "; if(json.title <> None) then print_string (unwrap json.title); print_string "\n"; 
   print_string "descendants: "; if(json.descendants <> None) then print_int (unwrap json.descendants); print_string "\n"
-;;
-
-let rec print_list = function 
-    | [] -> ()
-    | e::l -> print_string (string_of_token e) ; print_string "\n" ; print_list l
 ;;
 
 let rev_list l =
@@ -95,14 +120,8 @@ let parse raw_json =
   (populate_json data_rec (rev_list token_list))
 ;;
 
-(* type json_val = 
-  | Text: string
-  | Number: int 
-  | List: int list
-;; *)
-
 let () = 
-  let json = "{
+  let json1 = "{
     \"by\" : \"justin\",
     \"id\" : 192327,
     \"score\" : 6,
@@ -112,8 +131,20 @@ let () =
     \"type\" : \"job\",
     \"url\" : \"\"
   }" in
+  let json2 = 
+  "{
+    \"by\" : \"dhouston\",
+    \"descendants\" : 71,
+    \"id\" : 8863,
+    \"kids\" : [ 8952, 9224, 8917, 8884, 8887, 8943, 8869, 8958, 9005, 9671, 8940, 9067, 8908, 9055, 8865, 8881, 8872, 8873, 8955, 10403, 8903, 8928, 9125, 8998, 8901, 8902, 8907, 8894, 8878, 8870, 8980, 8934, 8876 ],
+    \"score\" : 111,
+    \"time\" : 1175714200,
+    \"title\" : \"My YC app: Dropbox - Throw away your USB drive\",
+    \"type\" : \"story\",
+    \"url\" : \"http://www.getdropbox.com/u/2/screencast.html\"
+  }" in
   (* print_list (rev_list (tokenize json)) *)
-  (print_json (parse json))
+  (print_json (parse json2))
 ;;
 
 (* let get key json = 
