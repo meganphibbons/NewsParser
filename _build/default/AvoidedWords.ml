@@ -1,3 +1,10 @@
+(* 
+ * List of Avoided Words (Mostly here to keep code cleaner)
+ * Authors: Megan Phibbons
+ * To use, include 'open AvoidedWords' at the top of a file
+ * Purpose: Make sure we don't include words that are too common and aren't really "keywords"
+ *)
+
 let avoided = [
   "person";
   "year";

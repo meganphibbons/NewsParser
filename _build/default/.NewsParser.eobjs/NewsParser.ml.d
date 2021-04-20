@@ -1,1 +1,1 @@
-NewsParser.ml: KeywordGenerator List Tokens
+NewsParser.ml: JSONSamples Parser

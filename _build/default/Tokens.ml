@@ -1,4 +1,12 @@
-exception InputError of string
+(* 
+ * JSON Tokenizer
+ * Authors: Megan Phibbons
+ * To use, include 'open Tokens' at the top of a file
+ * Useful Functions: 
+ * - tokenize -> string [raw json text] -> tokens list [ready to parse list of tokens] 
+ *)
+
+open Utility
 
 (* List of all possible tokens - the first half (INT - COMMA) are general tokens for things
    that can show up in a JSON file. The second half (ID - DESCENDANTS) are tokens specific to 
@@ -93,9 +101,6 @@ let score_reg = "\"score\""
 let title_reg = "\"title\""
 let parts_reg = "\"parts\""
 let descendants_reg = "\"descendants\""
-
-(* Whitespace for the actual tokenize function *)
-let whitespace = Str.regexp " \\|\n\\|\t"
 
 (* Used to map the regular expression to a function that converts a string to a token
    int, float, and string are all special because we save the actual data rather than noting the
