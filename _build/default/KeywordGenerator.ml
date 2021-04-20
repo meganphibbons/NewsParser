@@ -1,8 +1,9 @@
 open Tokens
+open AvoidedWords
 
 let prune key = 
   let no_html = (Str.global_replace (Str.regexp "<[^>]*>") "" key) in
-  (Str.global_replace (Str.regexp"[:,()+\\\"*]") "" no_html)
+  (Str.global_replace (Str.regexp"[!:,()+\\\"*]") "" no_html)
 
 let rec populate_table table = function 
   | [] -> table
@@ -38,11 +39,23 @@ let make_pair_list table =
   Hashtbl.fold (fun k v acc -> (k, v) :: acc) table []
 ;;
 
+let rec is_common word = function 
+  | [] -> false
+  | h::t when h = word -> true
+  | h::t -> is_common word t
+;;
+
+let rec trim_pq pq = match pq with 
+  | [] -> pq
+  | (hkey, hval)::t -> if is_common hkey avoided then trim_pq t else (hkey, hval)::(trim_pq t)
+;;
+
+
 let generate_keywords article_text = 
   let table = Hashtbl.create 500 in
   (* val my_hash : (string, int) Hashtbl.t;; map from string to num occurrences *)
   let word_list = (Str.split whitespace (Str.global_replace (Str.regexp "\.") " " article_text)) in 
   let table = (populate_table table word_list) in 
   let pair_list = (make_pair_list table) in
-  print_pq (make_pq [] pair_list)
+  print_pq (trim_pq (make_pq [] pair_list))
 ;;

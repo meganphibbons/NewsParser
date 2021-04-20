@@ -1,3 +1,7 @@
+(** @canonical Dune__exe.AvoidedWords *)
+module AvoidedWords = Dune__exe__AvoidedWords
+
+
 (** @canonical Dune__exe.KeywordGenerator *)
 module KeywordGenerator = Dune__exe__KeywordGenerator
 
