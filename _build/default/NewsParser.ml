@@ -1,9 +1,105 @@
 open Tokens
 
+type json_data = 
+  {
+    id : int option;
+    post_type: string option;
+    text: string option;
+    parent: int option;
+    kids: int list option;
+    title: string option;
+    descendants: int option;
+  }
+  (* Fields that I opted to not include but can be added later if desired *)
+  (* deleted: bool option; *)
+  (* by: string option; *)
+  (* time: int option; *)
+  (* dead: bool option; *)
+  (* poll: string option; *)
+  (* url: string option; *)
+  (* score: int option; *)
+  (* parts: int list option; *)
+
+  exception NoneOptionError of string
+
+let rec next token_check = function 
+  | [] -> (raise (InputError "Bad JSON Formatting - empty"))
+  | h::t when h = token_check -> t
+  | _ -> (raise (InputError "Bad JSON Formatting - tokens in bad format"))
+;;
+
+let unwrap opt = 
+  match opt with
+  | Some a -> a
+  | None -> (raise (NoneOptionError "Option shouldn't be None here"))
+
+  let rec populate_json curr_json_rec = function  
+  | [] -> curr_json_rec
+  | h::t when h = ID -> 
+    let INT(nh)::nt = (next COLON t) in 
+    (populate_json ({curr_json_rec with id = Some(nh)}) nt)
+  | h::t when h = TYPE ->
+    let STRING(nh)::nt = (next COLON t) in 
+    (populate_json ({curr_json_rec with post_type = Some(nh)}) nt)
+  | h::t when h = TEXT ->
+    let STRING(nh)::nt = (next COLON t) in 
+    (populate_json ({curr_json_rec with text = Some(nh)}) nt)
+  | h::t when h = PARENT ->
+    let INT(nh)::nt = (next COLON t) in 
+    (populate_json ({curr_json_rec with parent = Some(nh)}) nt)
+  (* | h::t when h = KIDS -> TODO: I am too lazy for this right now *)
+  | h::t when h = TITLE ->
+    let STRING(nh)::nt = (next COLON t) in 
+    (populate_json ({curr_json_rec with title = Some(nh)}) nt)
+  | h::t when h = DESCENDANTS ->
+    let INT(nh)::nt = (next COLON t) in 
+    (populate_json ({curr_json_rec with descendants = Some(nh)}) nt)
+  | h::t -> populate_json curr_json_rec t
+  | _ -> curr_json_rec
+;;
+
+let print_json json =  
+  print_string "id: "; if(json.id <> None) then print_int (unwrap json.id); print_string "\n"; 
+  print_string "post type: "; if(json.post_type <> None) then print_string (unwrap json.post_type); print_string "\n"; 
+  print_string "text: "; if(json.text <> None) then print_string (unwrap json.text); print_string "\n"; 
+  print_string "parent: "; if(json.parent <> None) then print_int (unwrap json.parent); print_string "\n"; 
+  (* if(json.kids <> None) then print_string "kids: "; print_int (unwrap json.kids); print_string "\n";  *)
+  print_string "title: "; if(json.title <> None) then print_string (unwrap json.title); print_string "\n"; 
+  print_string "descendants: "; if(json.descendants <> None) then print_int (unwrap json.descendants); print_string "\n"
+;;
+
 let rec print_list = function 
     | [] -> ()
-    | e::l -> print_string (string_of_token e) ; print_string " " ; print_list l
+    | e::l -> print_string (string_of_token e) ; print_string "\n" ; print_list l
 ;;
+
+let rev_list l =
+  let rec rev_acc acc = function
+    | [] -> acc
+    | hd::tl -> rev_acc (hd::acc) tl
+  in 
+  rev_acc [] l
+
+let parse raw_json = 
+  let token_list = (tokenize raw_json) in 
+  let data_rec = 
+    {
+      id = None;
+      post_type = None;
+      text = None;
+      parent = None;
+      kids = None;
+      title = None;
+      descendants = None
+    } in
+  (populate_json data_rec (rev_list token_list))
+;;
+
+(* type json_val = 
+  | Text: string
+  | Number: int 
+  | List: int list
+;; *)
 
 let () = 
   let json = "{
@@ -16,7 +112,8 @@ let () =
     \"type\" : \"job\",
     \"url\" : \"\"
   }" in
-  (print_list (tokenize json))
+  (* print_list (rev_list (tokenize json)) *)
+  (print_json (parse json))
 ;;
 
 (* let get key json = 

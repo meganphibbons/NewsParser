@@ -39,7 +39,7 @@ let string_of_token = function
 | RIGHT_CURL -> "}"
 | LEFT_SQUARE -> "["
 | RIGHT_SQUARE -> "]"
-| COLON -> ":"
+| COLON -> "TOKEN COLON :"
 | COMMA -> ","
 | ID -> "id"
 | DELETED -> "deleted"
@@ -158,4 +158,3 @@ let tokenize json =
   in
   tokenize 0 []
 ;;
-
