@@ -1,5 +1,19 @@
 open Tokens
 
+exception NoneOptionError of string
+exception BadListError of string
+exception BadTokenError of string
+
+(* Record to keep track of json data so that it is easily accessible throughout the rest of the project *)
+(* Fields that I opted to not include but can be added later if desired *)
+(* deleted: bool option; *)
+(* by: string option; *)
+(* time: int option; *)
+(* dead: bool option; *)
+(* poll: string option; *)
+(* url: string option; *)
+(* score: int option; *)
+(* parts: int list option; *)
 type json_data = 
   {
     id : int option;
@@ -10,33 +24,22 @@ type json_data =
     title: string option;
     descendants: int option;
   }
-  (* Fields that I opted to not include but can be added later if desired *)
-  (* deleted: bool option; *)
-  (* by: string option; *)
-  (* time: int option; *)
-  (* dead: bool option; *)
-  (* poll: string option; *)
-  (* url: string option; *)
-  (* score: int option; *)
-  (* parts: int list option; *)
 
-  exception NoneOptionError of string
-  exception BadListError of string
-  exception BadTokenError of string
-
+(* Make sure that the token following a keyword is an index and return the token after the colon *)
 let rec next token_check = function 
   | [] -> (raise (InputError "Bad JSON Formatting - empty"))
   | h::t when h = token_check -> t
   | _ -> (raise (InputError "Bad JSON Formatting - tokens in bad format"))
-;;
+;; 
 
-
+(* We should always check if something is None before calling this unwrap *)
 let unwrap opt = 
   match opt with
   | Some a -> a
   | None -> (raise (NoneOptionError "Option shouldn't be None here"))
 ;;
 
+(* Make a list of INT tokens based on the json data *)
 let rec make_list curr_list = function 
   | [] -> (raise (BadListError "Make sure your list is surrounded by brackets!"))
   | h::t when h = LEFT_SQUARE -> (raise (BadListError "Shouldn't have another bracket"))
@@ -46,20 +49,12 @@ let rec make_list curr_list = function
   | _ -> (raise (BadListError "Shouldn't reach this catch-all for lists"))
 ;;
 
-let rec print_list = function 
-    | [] -> ()
-    | e::l -> print_string (string_of_token e) ; print_string "\n" ; print_list l
-;;
-
-let rec print_int_list = function 
-    | [] -> ()
-    | e::l -> print_string (string_of_int e) ; print_string ", " ; print_int_list l
-;;
-
+(* Used for the call to map when converting a list of INT tokens to a list of ints *)
 let int_of_token = function
   | INT(t) -> t
   | _ -> (raise (BadTokenError "not an int"))
 
+(* Given an existing record (initially empty) and list of tokens, populate the json record *)
 let rec populate_json curr_json_rec = function  
   | [] -> curr_json_rec
   | h::t when h = ID -> 
@@ -88,16 +83,7 @@ let rec populate_json curr_json_rec = function
   | _ -> curr_json_rec
 ;;
 
-let print_json json =  
-  print_string "id: "; if(json.id <> None) then print_int (unwrap json.id); print_string "\n"; 
-  print_string "post type: "; if(json.post_type <> None) then print_string (unwrap json.post_type); print_string "\n"; 
-  print_string "text: "; if(json.text <> None) then print_string (unwrap json.text); print_string "\n"; 
-  print_string "parent: "; if(json.parent <> None) then print_int (unwrap json.parent); print_string "\n"; 
-  print_string "kids: "; if(json.kids <> None) then print_int_list (unwrap json.kids); print_string "\n"; 
-  print_string "title: "; if(json.title <> None) then print_string (unwrap json.title); print_string "\n"; 
-  print_string "descendants: "; if(json.descendants <> None) then print_int (unwrap json.descendants); print_string "\n"
-;;
-
+(* Necessary to be able to reverse a list because the tokens are stored in reverse order *)
 let rev_list l =
   let rec rev_acc acc = function
     | [] -> acc
@@ -105,6 +91,7 @@ let rev_list l =
   in 
   rev_acc [] l
 
+(* Function called externally - this is the only one necessary to call if trying to get the json object *)
 let parse raw_json = 
   let token_list = (tokenize raw_json) in 
   let data_rec = 
@@ -120,6 +107,30 @@ let parse raw_json =
   (populate_json data_rec (rev_list token_list))
 ;;
 
+(* Printing for testing purposes *)
+let rec print_list = function 
+    | [] -> ()
+    | e::l -> print_string (string_of_token e) ; print_string "\n" ; print_list l
+;;
+
+(* Printing for testing purposes *)
+let rec print_int_list = function 
+    | [] -> ()
+    | e::l -> print_string (string_of_int e) ; print_string ", " ; print_int_list l
+;;
+
+(* Printing for testing purposes *)
+let print_json json =  
+  print_string "id: "; if(json.id <> None) then print_int (unwrap json.id); print_string "\n"; 
+  print_string "post type: "; if(json.post_type <> None) then print_string (unwrap json.post_type); print_string "\n"; 
+  print_string "text: "; if(json.text <> None) then print_string (unwrap json.text); print_string "\n"; 
+  print_string "parent: "; if(json.parent <> None) then print_int (unwrap json.parent); print_string "\n"; 
+  print_string "kids: "; if(json.kids <> None) then print_int_list (unwrap json.kids); print_string "\n"; 
+  print_string "title: "; if(json.title <> None) then print_string (unwrap json.title); print_string "\n"; 
+  print_string "descendants: "; if(json.descendants <> None) then print_int (unwrap json.descendants); print_string "\n"
+;;
+
+(* Testing data and work - this just ensures that the tokenizer works as intended and the parser works *)
 let () = 
   let json1 = "{
     \"by\" : \"justin\",
@@ -143,20 +154,10 @@ let () =
     \"type\" : \"story\",
     \"url\" : \"http://www.getdropbox.com/u/2/screencast.html\"
   }" in
-  (* print_list (rev_list (tokenize json)) *)
-  (print_json (parse json2))
+  print_string "JSON 1 Data:\n";
+  (print_json (parse json1));
+  print_string "\n JSON 2 Data:\n";
+  (print_json (parse json2));
+  (* Test Tokenizer: print_list (rev_list (tokenize json)) *)
 ;;
 
-(* let get key json = 
-  let index = (search json "\"" + key + "\"" + " : ")
-  if index == -1 return "Key Not Found"
-
-
-let search json_file regex = 
-    try(Str.search_forward (Str.regexp regex) json_file 0) with 
-      Not_found -> -1;
-
-let is_comment json_file = 
-  (find_type json_file "\"type\" : \"comment\"") != -1
-
-let get_parent json_file =  *)
