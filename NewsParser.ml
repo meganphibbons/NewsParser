@@ -6,9 +6,13 @@
 
 open JSONSamples
 open Parser
+open NewsCrawler
 
 (* Main Function *)
 let () = 
   print_keywords json1 5;
-  print_keywords json2 4
+  print_keywords json2 4;
+  match build_json_tree 8863 with
+  | Leaf _ -> print_endline("Wrong\n")
+  | Node a -> print_json a.value
 ;;
