@@ -1,6 +1,7 @@
 open Lwt
 open Cohttp
 open Cohttp_lwt_unix
+open Parser
 
 let base_string = "https://hacker-news.firebaseio.com/v0/item/"
 let max_item_string = "https://hacker-news.firebaseio.com/v0/maxitem.json"
@@ -17,6 +18,11 @@ let get_random_item =
   Client.get (Uri.of_string (max_item_string)) >>= fun (_, body) -> 
   body |> Cohttp_lwt.Body.to_string >|= fun body ->
   Random.int (int_of_string(body))
+
+let rec find_parent_id id = 
+  let curr = Lwt_main.run (get_item_from_id id) in 
+  let curr_json = parse (curr) in 
+  if curr_json.post_type = "comment" then find_parent_id (curr_json.parent) else curr_json.id
 
 let () =
   let res = Lwt_main.run (get_item_from_id 8863) and
