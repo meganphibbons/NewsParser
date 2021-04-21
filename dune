@@ -1,6 +1,6 @@
 (executable
- (name NewsParser)
- (libraries Str))
+  (name NewsParser)
+  (libraries str lwt cohttp cohttp-lwt-unix))
 
 (env
   (dev
