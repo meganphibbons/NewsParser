@@ -22,5 +22,13 @@ module Parser = Dune__exe__Parser
 module Tokens = Dune__exe__Tokens
 
 
+(** @canonical Dune__exe.TreeSamples *)
+module TreeSamples = Dune__exe__TreeSamples
+
+
 (** @canonical Dune__exe.Utility *)
 module Utility = Dune__exe__Utility
+
+
+(** @canonical Dune__exe.Visualizer *)
+module Visualizer = Dune__exe__Visualizer

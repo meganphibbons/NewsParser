@@ -6,9 +6,13 @@
 
 open JSONSamples
 open Parser
+open Visualizer
+open TreeSamples
+
 
 (* Main Function *)
 let () = 
   print_keywords json1 5;
-  print_keywords json2 4
+  print_keywords json2 4;
+  tree_to_dotfile t1 "tree.dot"
 ;;
