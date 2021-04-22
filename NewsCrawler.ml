@@ -2,7 +2,7 @@
  * HackerNews API NewsCrawler
  * Authors: Dorian Barber
  * main function(s):
- * - build_json_tree -> int (HackerNews item id) -> json_data tree (tree with json_data object as values)
+ * - build_json_tree -> int (HackerNews item id) -> string tree (tree with string keywords as values)
  * - find_parent_id -> int (HackerNews item id) -> option int (the id for the root of the tree which contains this item)
  *)
 
