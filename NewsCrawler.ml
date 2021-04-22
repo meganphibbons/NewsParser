@@ -1,3 +1,10 @@
+(*
+ * HackerNews API NewsCrawler
+ * Authors: Dorian Barber
+ * main function(s):
+ * - build_json_tree -> int (HackerNews item id) -> json_data tree (tree with json_data object as values)
+ *)
+
 open Lwt
 open Cohttp
 open Cohttp_lwt_unix
