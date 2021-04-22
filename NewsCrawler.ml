@@ -45,10 +45,10 @@ let rec find_parent_id id =
 
 let get_keywords_from_json json =
   match json.text with
-  | Some text -> get_keywords text text_kw_count
+  | Some text -> Some(get_keywords text text_kw_count)
   | None -> match json.title with 
-    | Some title -> get_keywords title title_kw_count
-    | None -> ""
+    | Some title -> Some(get_keywords title title_kw_count)
+    | None -> None
 
 (* Example call to build_json_tree
 match build_json_tree 8863 with
@@ -58,7 +58,7 @@ match build_json_tree 8863 with
 let rec build_json_tree id = 
   let curr = Lwt_main.run (get_item_from_id id) in 
   let curr_json = parse (curr) in
-  match curr_json.kids with
-  | Some kids -> Node {value = get_keywords_from_json (curr_json); children = List.map build_json_tree kids}
-  | None -> Leaf (get_keywords_from_json (curr_json))
+  match curr_json.kids, get_keywords_from_json(curr_json) with
+  | Some kids, Some keywords -> Node {value = keywords; children = List.map build_json_tree kids}
+  | None, Some keywords -> Leaf keywords
 
