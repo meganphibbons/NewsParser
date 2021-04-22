@@ -1,7 +1,0 @@
-(executable
- (name NewsParser)
- (libraries Str))
-
-(env
-  (dev
-    (flags (:standard -warn-error -A))))
