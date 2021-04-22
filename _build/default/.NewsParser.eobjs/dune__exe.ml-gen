@@ -1,0 +1,34 @@
+(** @canonical Dune__exe.AvoidedWords *)
+module AvoidedWords = Dune__exe__AvoidedWords
+
+
+(** @canonical Dune__exe.JSONSamples *)
+module JSONSamples = Dune__exe__JSONSamples
+
+
+(** @canonical Dune__exe.KeywordGenerator *)
+module KeywordGenerator = Dune__exe__KeywordGenerator
+
+
+(** @canonical Dune__exe.NewsParser *)
+module NewsParser = Dune__exe__NewsParser
+
+
+(** @canonical Dune__exe.Parser *)
+module Parser = Dune__exe__Parser
+
+
+(** @canonical Dune__exe.Tokens *)
+module Tokens = Dune__exe__Tokens
+
+
+(** @canonical Dune__exe.TreeSamples *)
+module TreeSamples = Dune__exe__TreeSamples
+
+
+(** @canonical Dune__exe.Utility *)
+module Utility = Dune__exe__Utility
+
+
+(** @canonical Dune__exe.Visualizer *)
+module Visualizer = Dune__exe__Visualizer
