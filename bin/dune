@@ -1,4 +1,4 @@
 (executable
- (public_name NewsParser)
+ (public_name NewsParserExe2)
  (name main)
  (libraries NewsParser))

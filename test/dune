@@ -1,2 +1,7 @@
-(test
- (name NewsParser))
+(tests
+ (names NewsParserTests)
+ (libraries NewsParser oUnit))
+
+ (env
+  (dev
+    (flags (:standard -warn-error -A))))

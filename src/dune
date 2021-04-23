@@ -1,0 +1,9 @@
+(library
+ (name NewsParser)
+ (libraries Str lwt cohttp cohttp-lwt-unix)
+ (modules AvoidedWords Tokens JSONSamples KeywordGenerator NewsCrawler Parser Tree TreeSamples Utility Visualizer))
+
+
+(env
+  (dev
+    (flags (:standard -warn-error -A))))

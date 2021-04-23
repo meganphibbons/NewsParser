@@ -1,0 +1,38 @@
+(** @canonical NewsParser.AvoidedWords *)
+module AvoidedWords = NewsParser__AvoidedWords
+
+
+(** @canonical NewsParser.JSONSamples *)
+module JSONSamples = NewsParser__JSONSamples
+
+
+(** @canonical NewsParser.KeywordGenerator *)
+module KeywordGenerator = NewsParser__KeywordGenerator
+
+
+(** @canonical NewsParser.NewsCrawler *)
+module NewsCrawler = NewsParser__NewsCrawler
+
+
+(** @canonical NewsParser.Parser *)
+module Parser = NewsParser__Parser
+
+
+(** @canonical NewsParser.Tokens *)
+module Tokens = NewsParser__Tokens
+
+
+(** @canonical NewsParser.Tree *)
+module Tree = NewsParser__Tree
+
+
+(** @canonical NewsParser.TreeSamples *)
+module TreeSamples = NewsParser__TreeSamples
+
+
+(** @canonical NewsParser.Utility *)
+module Utility = NewsParser__Utility
+
+
+(** @canonical NewsParser.Visualizer *)
+module Visualizer = NewsParser__Visualizer
