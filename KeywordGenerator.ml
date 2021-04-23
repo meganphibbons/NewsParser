@@ -12,7 +12,7 @@ open AvoidedWords
 (* Helper function that removes HTML tags and symbols from the text *)
 let prune key = 
   let no_html = (Str.global_replace (Str.regexp "<[^>]*>") "" key) in
-  (Str.global_replace (Str.regexp"[\\?\\!:,()+\\\"*]") "" no_html)
+  (Str.global_replace (Str.regexp"[][\\?\\!:,()+\\\"*@/\\~=><;'-]") "" no_html)
 
 (* Helper function that populates a hashtable from a list of keywords *)
 let rec populate_table table = function 

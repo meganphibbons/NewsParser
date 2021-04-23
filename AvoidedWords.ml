@@ -143,4 +143,26 @@ let avoided = [
   "haves";
   "keep";
   "keeps";
+  "your";
+  "because";
+  "why";
+  "i";
+  "i've";
+  "you've";
+  "we've";
+  "like";
+  "something";
+  "was";
+  "were";
+  "so";
+  "do";
+  "did";
+  "why";
+  "very";
+  "it's";
+  "its";
+  "that's";
+  "some";
+  "do";
+  "don't"
 ]
