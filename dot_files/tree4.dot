@@ -1,0 +1,47 @@
+digraph tree {
+1491236[shape=circle, label="such, picture, show"]
+1492779[shape=circle, label="html5, based, gives"]
+1492223[shape=circle, label="does, implementation, prereleases"]
+1491078[shape=circle, label="com1278097072, deepgamers, relnofollowhttpimg"]
+1493147[shape=circle, label="stylesheets, allowing, security"]
+1493055[shape=circle, label="comment, reread, missed"]
+1492822[shape=circle, label="explaining, thanks, joke"]
+1492361[shape=circle, label="meaningless, matter, anyway"]
+1493832[shape=circle, label="NONE"]
+1492595[shape=circle, label="increase, updates, version"]
+1492186[shape=circle, label="numbers, theyre, warrantedim"]
+1491323[shape=circle, label="version, numbers, arbitrary"]
+1492574[shape=circle, label="versions, build, publicfacing"]
+1491565[shape=circle, label="release, chrome, significance"]
+1491343[shape=circle, label="milestones, no, v6"]
+1491526[shape=circle, label="477, 0, explanatory"]
+1492194[shape=circle, label="version, major, which"]
+1491293[shape=circle, label="version, full, warrant"]
+1493103[shape=circle, label="ie6, browsers, ie"]
+1492996[shape=circle, label="many, understanding, wouldnt"]
+1492464[shape=circle, label="visiting, worth, none"]
+1491712[shape=circle, label="6, custom, filter"]
+1490932[shape=circle, label=""]
+1491078->1491236
+1492223->1492779
+1491078->1492223
+1490932->1491078
+1490932->1493147
+1492822->1493055
+1492361->1492822
+1492186->1492361
+1492595->1493832
+1492186->1492595
+1491323->1492186
+1491293->1491323
+1491565->1492574
+1491293->1491565
+1491293->1491343
+1491293->1491526
+1491293->1492194
+1490932->1491293
+1491712->1493103
+1491712->1492996
+1491712->1492464
+1490932->1491712
+}

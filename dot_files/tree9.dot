@@ -1,0 +1,511 @@
+digraph tree {
+2559669[shape=circle, label="0, float, code"]
+2559042[shape=circle, label="script, kind, lua"]
+2559128[shape=circle, label="com201103truthinessisoutthere, blogspot, relnofollowhttpgbracha"]
+2557604[shape=circle, label="javascript, level, language"]
+2558195[shape=circle, label="secure, google, system"]
+2557768[shape=circle, label="adoption, google, could"]
+2557413[shape=circle, label="nativeclient, recalcitrant, beginning"]
+2557415[shape=circle, label="nativeclient, distributed, aboutflags"]
+2557544[shape=circle, label="nacl, chromium, wont"]
+2557517[shape=circle, label="chromium, orgnativeclientreferenceresearchpapers, orgnativeclientreferenceresearchpape"]
+2557494[shape=circle, label="exploited, insecure, remotely"]
+2557387[shape=circle, label="comsvndatasitepnacl, googlecode, chromium"]
+2557619[shape=circle, label="android, oswebmultiarchitecturecpu, counterexample"]
+2558711[shape=circle, label="javascript, oracle, page"]
+2558407[shape=circle, label="appropriateness, multiprocess, compactness"]
+2557561[shape=circle, label="jvm, page, javascript"]
+2557503[shape=circle, label="jvm, applets, integrated"]
+2557484[shape=circle, label="java, applets, supported"]
+2559134[shape=circle, label="milliseconds, acceptable, certainly"]
+2558363[shape=circle, label="suggesting, browsers, bytecode"]
+2557603[shape=circle, label="0, start, java"]
+2557492[shape=circle, label="applications, longrunning, specialized"]
+2557567[shape=circle, label="suggesting, terrible, applets"]
+2557531[shape=circle, label="web, silverlight, environment"]
+2557448[shape=circle, label="apps, browser, implementing"]
+2557515[shape=circle, label="NONE"]
+2557440[shape=circle, label="implement, browser, me"]
+2557380[shape=circle, label="NONE"]
+2557341[shape=circle, label="desktop, browser, sandboxingsecurityvirtualization"]
+2557510[shape=circle, label="web, compatibilitydriven, standardsbased"]
+2561510[shape=circle, label="plan, well"]
+2557488[shape=circle, label="&#62&#62, wouldnt, javait"]
+2557340[shape=circle, label="java, javascript, already"]
+2557260[shape=circle, label="desktop, &#62, application"]
+2558644[shape=circle, label="grassisgreener, comparatively, performance"]
+2558015[shape=circle, label="qml, qt, native"]
+2557634[shape=circle, label="code, desktop, less"]
+2557191[shape=circle, label="lowlevel, browser, desktop"]
+2583023[shape=circle, label="can, standardized, implemented"]
+2557119[shape=circle, label="javascript, than, interpreters"]
+2557027[shape=circle, label="comkripkenemscripten, bytecode, library"]
+2557348[shape=circle, label="highlevel, absolutely, javascript"]
+2556589[shape=circle, label="comitemid2555552, ycombinator, memory"]
+2556448[shape=circle, label="understand, booted, dont"]
+2556408[shape=circle, label="orgjslinuxtech, html, relnofollowhttpbellard"]
+2556290[shape=circle, label="js, interpreter, environment"]
+2556260[shape=circle, label="apis, efficiently, lowlevel"]
+2555787[shape=circle, label="balance, company, personaltoyexperimental"]
+2555553[shape=circle, label="normal, perhaps, company"]
+2557250[shape=circle, label="comperformancereview, html, relnofollowhttpnorvig"]
+2556334[shape=circle, label="orgwikialbert_einstein, wikipedia, relnofollowhttpen"]
+2555707[shape=circle, label="patent, office, clerk"]
+2555687[shape=circle, label="orgwikinetgem, wikipedia, relnofollowhttpfr"]
+2555541[shape=circle, label="company, which"]
+2555522[shape=circle, label="normal, megatechcorp, startup"]
+2556295[shape=circle, label="software, awesome, virtually"]
+2555703[shape=circle, label="netgem, works"]
+2555572[shape=circle, label="no, backburner, virtually"]
+2555495[shape=circle, label="egotistical, discovered, arbitrary"]
+2556298[shape=circle, label="announcement, announced, whatever"]
+2555537[shape=circle, label="ioccc, c, org2001bellard"]
+2559859[shape=circle, label="n, 00000000000001, actually"]
+2557355[shape=circle, label="&#62, k, otherwise"]
+2556570[shape=circle, label="programmer, programmers, understated"]
+2556319[shape=circle, label="can, hackers, complexity"]
+2556066[shape=circle, label="languages, favourite, academic"]
+2555608[shape=circle, label="greatest, versions, hackers"]
+2555618[shape=circle, label="competitors, companys, fabrice"]
+2556045[shape=circle, label="wikipedia, macarthur, resident"]
+2555645[shape=circle, label="orgwikirichard_stallman#recognition, wikipedia, relnofollowhttpen"]
+2558289[shape=circle, label="wrote, indeed, qemu"]
+2555695[shape=circle, label="paravirtualization, business, binaries"]
+2555576[shape=circle, label="creations, deserves, suspect"]
+2556344[shape=circle, label="can, believe, browser"]
+2556049[shape=circle, label="us, citizenship, definitely"]
+2555490[shape=circle, label="impressive, macarthur, floating"]
+2556303[shape=circle, label="comsearchqsiteioccc, orgbellard, google"]
+2555780[shape=circle, label="org, relnofollowhttpbellard, hrefhttpbellard"]
+2555833[shape=circle, label="NONE"]
+2555762[shape=circle, label="returns, searching, nothing"]
+2555474[shape=circle, label="used, impressive, emission"]
+2558028[shape=circle, label="requests, telnet, start"]
+2555766[shape=circle, label="binaries, network, telnet"]
+2555509[shape=circle, label="directory, adduser, create"]
+2569523[shape=circle, label="busybox, looks"]
+2556413[shape=circle, label="minimalistic, theres, dont"]
+2556176[shape=circle, label="vim"]
+2555496[shape=circle, label="n, hello, #"]
+2555587[shape=circle, label="forkn, cant, sh"]
+2556090[shape=circle, label="software, time, code"]
+2555628[shape=circle, label="freearchive, orgo55dfc9935a719fc36ab1d16567972732c2db1fd7d7e3826fd73ee07e4c3c7d0b, orgo55dfc9935a719fc36ab1d1656797273"]
+2555605[shape=circle, label="softwarequalityconnection, bellard, fabrice"]
+2558384[shape=circle, label="currently, mentioned, running"]
+2557125[shape=circle, label="bootloader, linuxstart, bin"]
+2555552[shape=circle, label="ya, bin, function"]
+2555529[shape=circle, label="disk, someone, image"]
+2556729[shape=circle, label="rendered, gecko, xul"]
+2556347[shape=circle, label=""]
+2555861[shape=circle, label="firefox, chromebrowsercontentbrowser, interestingly"]
+2555837[shape=circle, label="linux, even, shortsighted"]
+2556974[shape=circle, label="dependencies, backend, geckos"]
+2555828[shape=circle, label="inside, firefox, linux"]
+2556721[shape=circle, label="limitations, crossdomain, serverside"]
+2555692[shape=circle, label="n, 0, overruns0"]
+2556970[shape=circle, label="server, implementation, unburdened"]
+2556440[shape=circle, label="discovered, building, however"]
+2556453[shape=circle, label="reddit, appreciate, left"]
+2556399[shape=circle, label="inception, matter"]
+2555712[shape=circle, label="dawg, yo"]
+2555640[shape=circle, label="kernelsbut, javascript, browser"]
+2555600[shape=circle, label="inside, firefox, linux"]
+2555596[shape=circle, label="inside, linux, firefox"]
+2557037[shape=circle, label="compaddymulrxvtjs, relnofollowhttpsgithub, hrefhttpsgithub"]
+2555824[shape=circle, label="sh, orgscriptsansi_colours, pixelbeat"]
+2555536[shape=circle, label="relnofollowhttpvt100, netemuvt500_parser, hrefhttpvt100"]
+2555797[shape=circle, label="templating, javascript, library"]
+2561230[shape=circle, label="software, making, time"]
+2561515[shape=circle, label="regardless, ubiquitous, people"]
+2561216[shape=circle, label="selling, code, restriction"]
+2561097[shape=circle, label="code, free, license"]
+2557483[shape=circle, label="begins, strict, love"]
+2556652[shape=circle, label="orgjslinuxcpux86, js, relnofollowhttpbellard"]
+2555887[shape=circle, label="orgjslinuxtech, chrome, html"]
+2555441[shape=circle, label="orgjslinuxtech, html, relnofollowhttpbellard"]
+2557426[shape=circle, label="version, instead, latest"]
+2555588[shape=circle, label="showslinux, gnulinux, 190830"]
+2555447[shape=circle, label="agolastmodified, 211450, 2011"]
+2555351[shape=circle, label="hackerdom, perelman, grigori"]
+2555391[shape=circle, label="browser, amazing, seen"]
+2555535[shape=circle, label="orgjslinuxtech, html, relnofollowhttpbellard"]
+2556683[shape=circle, label="browser, create, operating"]
+2555485[shape=circle, label="hello, #, impressive"]
+2555851[shape=circle, label="works, escx, me"]
+2555467[shape=circle, label="unfortunately, completeness, feature"]
+2555461[shape=circle, label="superhacker, unfinished, comparison"]
+2555711[shape=circle, label="emulates, assumes, jslinux"]
+2555528[shape=circle, label="orgddjmay98f00fbug, rcollins, curious"]
+2556706[shape=circle, label="0xc8c70ff0that, instruction, runlong"]
+2555454[shape=circle, label="performance, proccpuinfo, yes#hah20"]
+2556574[shape=circle, label="0, functional, 23nplenty"]
+2557538[shape=circle, label="f, double, readn"]
+2556248[shape=circle, label="0m, #, outn"]
+2556195[shape=circle, label="easily, &#62i, hack"]
+2555598[shape=circle, label="highlevel, writing, driver"]
+2559090[shape=circle, label="NONE"]
+2555560[shape=circle, label="volunteers, websocket, interface"]
+2555988[shape=circle, label="somewhere, write, emacs"]
+2555763[shape=circle, label="course, vi"]
+2555737[shape=circle, label="emacs, incomplete, version"]
+2556001[shape=circle, label="compiles, browser, fabrice"]
+2555548[shape=circle, label="hackernews, deserves, anything"]
+2555630[shape=circle, label="sourceforge, javascript, desktop"]
+2555782[shape=circle, label="years, com, relnofollowhttpsusestudio"]
+2556981[shape=circle, label="browser, reason, _much_"]
+2555565[shape=circle, label="ago, surprisingly, remembers"]
+2557051[shape=circle, label="donate, fabris, contribution"]
+2555456[shape=circle, label="cant, javascript, arbitrary"]
+2555835[shape=circle, label="orgpagevirtio, libvirt, relnofollowhttpwiki"]
+2557936[shape=circle, label="websockets"]
+2555604[shape=circle, label="request, network, server"]
+2555514[shape=circle, label="might, interesting, serverside"]
+2558334[shape=circle, label="paravirtualized, implementation, advantage"]
+2555478[shape=circle, label="ethernet, card, pciusbwhatever"]
+2555455[shape=circle, label="emulation, network, implement"]
+2555701[shape=circle, label="0, works, ping"]
+2555442[shape=circle, label="seriously, pingwget, working"]
+2558606[shape=circle, label="getting, ubuntu, google"]
+2558518[shape=circle, label="freeing, unused, memory"]
+2556050[shape=circle, label="chromebook, can, buy"]
+2555484[shape=circle, label="groundbreaking, consistently, unbelievable"]
+2557770[shape=circle, label="6, 2, support"]
+2557741[shape=circle, label="technical, emulator, disabled"]
+2556146[shape=circle, label="6, httpbellard, more"]
+2556038[shape=circle, label="6, compiling, 38"]
+2555802[shape=circle, label="6, 2, compiling"]
+2556110[shape=circle, label="compilerender, wondering, anyone"]
+2557766[shape=circle, label="n, 0, connection"]
+2559095[shape=circle, label="really, happiness, insane"]
+2558344[shape=circle, label="solution, inferior, cs107"]
+2556369[shape=circle, label="students, could, assignments"]
+2557408[shape=circle, label="could, environment, possibility"]
+2556030[shape=circle, label="interesting, ideas, used"]
+2555470[shape=circle, label="present, mount, sysfs"]
+2555917[shape=circle, label="image, transferred, developer"]
+2555607[shape=circle, label="orgjslinuxtech, loads, html"]
+2559153[shape=circle, label="google, comwebstoredetailkkioiolcacgoihiiekambdciinadbpfk, comwebstoredetailkkioiolcacgoihiiek"]
+2555646[shape=circle, label="source, relnofollowhttpjsbeautifier, hrefhttpjsbeautifier"]
+2556017[shape=circle, label="dev, probably, channel"]
+2555644[shape=circle, label="org, relnofollowhttpjsbeautifier, hrefhttpjsbeautifier"]
+2555557[shape=circle, label="source, humanreadable, aweinspiring"]
+2556139[shape=circle, label="javascript, minified, files"]
+2555896[shape=circle, label="emscripten, probably, emulates"]
+2555493[shape=circle, label="although, anything, android"]
+2556065[shape=circle, label="n, awesome, echo"]
+2559083[shape=circle, label="stackexchange, comquestions47197arethereanyfamousonemanarmyprogrammers47240#47240, relnofollowhttpprogrammers"]
+2559625[shape=circle, label="jslinux, kernel, bin"]
+2555675[shape=circle, label="firefox, chrome, twice"]
+2555784[shape=circle, label="prompt, until"]
+2559385[shape=circle, label="softwarequalityconnection, com201103fabricebellardportraitofasuperproductiveprogrammer, com201103fabricebel"]
+2556008[shape=circle, label="registered, scheduler, default"]
+2556251[shape=circle, label="otherwise, facility, logging"]
+2556093[shape=circle, label="ruby, applications, interface"]
+2555818[shape=circle, label="org, relnofollowhttptryruby, hrefhttptryruby"]
+2555911[shape=circle, label="yukoba, jp, relnofollowhttphotruby"]
+2555893[shape=circle, label="python, skulpt, org"]
+2555859[shape=circle, label="no"]
+2555775[shape=circle, label="starting, whether, browser"]
+2555748[shape=circle, label="imagination, frustrated, projects"]
+2556525[shape=circle, label="phantomjs, org, relnofollowhttpwww"]
+2556053[shape=circle, label="node, can, run"]
+2555584[shape=circle, label="thisevil, node, grin"]
+2555653[shape=circle, label="webserver, possible, remotely"]
+2556437[shape=circle, label="NONE"]
+2555494[shape=circle, label="hereedit, forever, havent"]
+2558728[shape=circle, label="overflow, someone, program"]
+2557630[shape=circle, label="temporary, whenever, install"]
+2557118[shape=circle, label="xkcd, com, relnofollowhttpuni"]
+2560049[shape=circle, label="publishing, opensource, massemail"]
+2555863[shape=circle, label="commandsusrbin, goodiesvi, students"]
+2556316[shape=circle, label="naclbox, relnofollowhttpwww, hrefhttpwww"]
+2556277[shape=circle, label="advanced, software, version"]
+2559376[shape=circle, label="submission, believe, highest"]
+2555570[shape=circle, label="nostalgia, embedded, similar"]
+2555995[shape=circle, label="NONE"]
+2557886[shape=circle, label="response, emotion, expect"]
+2557527[shape=circle, label="earlier, license, decided"]
+2557132[shape=circle, label="license, publish, job"]
+2558913[shape=circle, label="javascript, wondering, commodore"]
+2557100[shape=circle, label="outn, well, rm"]
+2557995[shape=circle, label="apparently, browser, android"]
+2558371[shape=circle, label="which, port, arggggggnmight"]
+2556624[shape=circle, label="interrupt, handlers, endless"]
+2556374[shape=circle, label="portable, intended, firefox"]
+2555827[shape=circle, label="usereboot, command, fun"]
+2555512[shape=circle, label="NONE"]
+2556451[shape=circle, label="booting, alias, llls"]
+2559224[shape=circle, label="comnews200812linuxonapotato, bbspot, html"]
+2559388[shape=circle, label="NONE"]
+2560852[shape=circle, label="can, run, understand"]
+2559831[shape=circle, label="kingsquare, nljsc64, relnofollowhttpwww"]
+2559401[shape=circle, label="NONE"]
+2558914[shape=circle, label="javascript, wondering, commodore"]
+2555424[shape=circle, label="interesting"]
+2555451[shape=circle, label="crazy, shit"]
+2555439[shape=circle, label="could, css, courierfixedswisssansserif"]
+2555561[shape=circle, label="NONE"]
+2555520[shape=circle, label="NONE"]
+2556591[shape=circle, label="messages, features, support"]
+2555929[shape=circle, label="support, believe, arrays"]
+2556156[shape=circle, label="opera, error, 11"]
+2558750[shape=circle, label="webkit, nightly, relnofollowhttpnightly"]
+2555593[shape=circle, label="arraybuffer, support, does"]
+2556932[shape=circle, label="running, message, version"]
+2555582[shape=circle, label="browser, using, javascript"]
+2555349[shape=circle, label="browser, inside, kernel, linux, boot"]
+2559042->2559669
+2557604->2559042
+2557604->2559128
+2556260->2557604
+2557768->2558195
+2557387->2557768
+2557387->2557413
+2557387->2557415
+2557494->2557544
+2557494->2557517
+2557387->2557494
+2556260->2557387
+2557448->2557619
+2557561->2558711
+2557561->2558407
+2557484->2557561
+2557484->2557503
+2557448->2557484
+2557603->2559134
+2557603->2558363
+2557492->2557603
+2557448->2557492
+2557531->2557567
+2557448->2557531
+2556260->2557448
+2557440->2557515
+2557260->2557440
+2557341->2557380
+2557260->2557341
+2557260->2557510
+2557488->2561510
+2557340->2557488
+2557260->2557340
+2557191->2557260
+2558015->2558644
+2557191->2558015
+2557191->2557634
+2556260->2557191
+2557119->2583023
+2557027->2557119
+2556260->2557027
+2556260->2557348
+2556448->2556589
+2556408->2556448
+2556290->2556408
+2556260->2556290
+2555349->2556260
+2555553->2555787
+2555522->2555553
+2556334->2557250
+2555707->2556334
+2555522->2555707
+2555541->2555687
+2555522->2555541
+2555495->2555522
+2555572->2556295
+2555572->2555703
+2555495->2555572
+2555474->2555495
+2555537->2556298
+2555474->2555537
+2557355->2559859
+2556570->2557355
+2556319->2556570
+2555608->2556319
+2555608->2556066
+2555474->2555608
+2555474->2555618
+2555490->2556045
+2555576->2555645
+2555695->2558289
+2555576->2555695
+2555490->2555576
+2556049->2556344
+2555490->2556049
+2555474->2555490
+2555762->2556303
+2555762->2555780
+2555762->2555833
+2555474->2555762
+2555349->2555474
+2555766->2558028
+2555509->2555766
+2555496->2555509
+2556413->2569523
+2556176->2556413
+2555496->2556176
+2555349->2555496
+2555349->2555587
+2555349->2556090
+2555605->2555628
+2555349->2555605
+2555552->2558384
+2555552->2557125
+2555529->2555552
+2555349->2555529
+2556347->2556729
+2555861->2556347
+2555596->2555861
+2555828->2555837
+2555828->2556974
+2555596->2555828
+2555692->2556721
+2555596->2555692
+2556440->2556970
+2555596->2556440
+2555600->2556453
+2555712->2556399
+2555640->2555712
+2555600->2555640
+2555596->2555600
+2555536->2555596
+2555536->2557037
+2555536->2555824
+2555349->2555536
+2555349->2555797
+2561097->2561230
+2561216->2561515
+2561097->2561216
+2555349->2561097
+2556652->2557483
+2555349->2556652
+2555349->2555887
+2555351->2555441
+2555588->2557426
+2555351->2555588
+2555351->2555447
+2555349->2555351
+2555349->2555391
+2555349->2555535
+2555349->2556683
+2555349->2555485
+2555467->2555851
+2555461->2555467
+2555454->2555461
+2555528->2555711
+2555454->2555528
+2555454->2556706
+2555349->2555454
+2555349->2556574
+2555349->2557538
+2555349->2556248
+2555349->2556195
+2555560->2555598
+2555560->2559090
+2555349->2555560
+2555763->2555988
+2555737->2555763
+2555349->2555737
+2555349->2556001
+2555349->2555548
+2555565->2555630
+2555565->2555782
+2555565->2556981
+2555349->2555565
+2555349->2557051
+2555442->2555456
+2555514->2555835
+2555604->2557936
+2555514->2555604
+2555478->2555514
+2555478->2558334
+2555455->2555478
+2555442->2555455
+2555442->2555701
+2555349->2555442
+2558518->2558606
+2556050->2558518
+2555349->2556050
+2555349->2555484
+2557741->2557770
+2556146->2557741
+2556038->2556146
+2555802->2556038
+2555349->2555802
+2555349->2556110
+2555349->2557766
+2555349->2559095
+2556369->2558344
+2556030->2556369
+2556030->2557408
+2555349->2556030
+2555349->2555470
+2555607->2555917
+2555349->2555607
+2555646->2559153
+2555557->2555646
+2555557->2556017
+2555557->2555644
+2555349->2555557
+2555349->2556139
+2555349->2555896
+2555349->2555493
+2555349->2556065
+2555349->2559083
+2555349->2559625
+2555349->2555675
+2555349->2555784
+2555349->2559385
+2555349->2556008
+2555349->2556251
+2555818->2556093
+2555775->2555818
+2555893->2555911
+2555775->2555893
+2555775->2555859
+2555349->2555775
+2555349->2555748
+2556053->2556525
+2555584->2556053
+2555349->2555584
+2555349->2555653
+2555349->2556437
+2555349->2555494
+2555349->2558728
+2555349->2557630
+2555349->2557118
+2555349->2560049
+2555349->2555863
+2556277->2556316
+2555349->2556277
+2555349->2559376
+2555349->2555570
+2555349->2555995
+2557527->2557886
+2557132->2557527
+2555349->2557132
+2555349->2558913
+2555349->2557100
+2555349->2557995
+2556624->2558371
+2556374->2556624
+2555827->2556374
+2555349->2555827
+2555349->2555512
+2555349->2556451
+2555349->2559224
+2555349->2559388
+2555349->2560852
+2555349->2559831
+2555349->2559401
+2555349->2558914
+2555349->2555424
+2555349->2555451
+2555349->2555439
+2555520->2555561
+2555349->2555520
+2555593->2556591
+2555593->2555929
+2555593->2556156
+2555593->2558750
+2555582->2555593
+2555582->2556932
+2555349->2555582
+}

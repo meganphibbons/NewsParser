@@ -1,0 +1,189 @@
+digraph tree {
+1916571[shape=circle, label="student, objects, systems"]
+1916457[shape=circle, label="freaking, applications, which"]
+1917137[shape=circle, label="xml, configuration, structured"]
+1917453[shape=circle, label="markup, sexpressions, routinely"]
+1916671[shape=circle, label="document, marked, saving"]
+1920019[shape=circle, label="contextdependent, irregularities, annoyingthat"]
+1917278[shape=circle, label="nicer, much, needlessly"]
+1916666[shape=circle, label="pretty, json, much"]
+1916379[shape=circle, label="libraries, which, built"]
+1917459[shape=circle, label="production, seen, xml"]
+1917964[shape=circle, label="validation, xml, wellformedness"]
+1916636[shape=circle, label="spec, specification, xml"]
+1917602[shape=circle, label="things, json, complicated"]
+1917298[shape=circle, label="language, another, bunch"]
+1917181[shape=circle, label="json, language, schema"]
+1916737[shape=circle, label="json, pointing, stopping"]
+1916611[shape=circle, label="xml, may, specification"]
+1916382[shape=circle, label="json, guarantee, rules"]
+1916352[shape=circle, label="orghtmldraftzypjsonschema02, ietf, relnofollowhttptools"]
+1918120[shape=circle, label="inline, which, code"]
+1917068[shape=circle, label="blogspot, com200701mixedcontenttryingtounderstandjson, com200701mixedcontenttrying"]
+1916739[shape=circle, label="mixed, dont, difficult"]
+1925632[shape=circle, label="technically, represented, convention"]
+1917273[shape=circle, label="xml, misunderstood, functionality"]
+1917216[shape=circle, label="{n, }n, n"]
+1917185[shape=circle, label="representationhow, converted, complete"]
+1916797[shape=circle, label="xml, json, practice"]
+1916532[shape=circle, label="can, xml, standards"]
+1916515[shape=circle, label="uri, field, json"]
+1916480[shape=circle, label="html, comdeveloperworkslibraryxatom2json, comapisgdatadocsjson"]
+1918384[shape=circle, label="json, these, objects"]
+1916377[shape=circle, label="doesnt, which, json"]
+1916337[shape=circle, label="xml, interpretation, predefined"]
+1916319[shape=circle, label="xml, youre, json"]
+1917314[shape=circle, label="certainly, useful, thats"]
+1916588[shape=circle, label="json, since, xml"]
+1916566[shape=circle, label="language, syntax, javascript"]
+1916396[shape=circle, label="xml, syntax, documentinterchanging"]
+1918054[shape=circle, label="write, cause, didnt"]
+1917561[shape=circle, label="scripting, languagei, popular"]
+1916799[shape=circle, label="more, languages, embedding"]
+1916368[shape=circle, label="scripts, game, xml"]
+1916334[shape=circle, label="xml, hate, php"]
+1916847[shape=circle, label="structured, data, semistructured"]
+1916716[shape=circle, label="understand, documents, dont"]
+1917479[shape=circle, label="coolandinteroperablesolutiontoeverything, mixedcontent, applications"]
+1916527[shape=circle, label="xml, json, programmers"]
+1935660[shape=circle, label="wellformedness, constraints, simply"]
+1925583[shape=circle, label="them, wellformedness, implementation"]
+1920836[shape=circle, label="can, schema, optional"]
+1920675[shape=circle, label="required, format, interoperability"]
+1917301[shape=circle, label="protocol, compatible, previous"]
+1924968[shape=circle, label="encodings, size, compression"]
+1920753[shape=circle, label="deserializing, transmitting, compression"]
+1917469[shape=circle, label="representation, efficient, does"]
+1917244[shape=circle, label="protobuf, can, any"]
+1919275[shape=circle, label="apparently, google, code"]
+1916813[shape=circle, label="specificationsi, protobufjson, commandline"]
+1916453[shape=circle, label="protocol, buffers, json"]
+1916970[shape=circle, label="combblfishentrythe_limitations_of_json, namespaces, json"]
+1917698[shape=circle, label="consumption, altogether, elements"]
+1917283[shape=circle, label="significantly, compared, larger"]
+1916482[shape=circle, label="really, bytes, wire"]
+1916425[shape=circle, label="json, org, relnofollowhttpwww"]
+1916323[shape=circle, label="example, looking, forward"]
+1916429[shape=circle, label="better, both, json"]
+1916380[shape=circle, label="unstructured, apis, deliberately"]
+1916612[shape=circle, label="sometimes, value, name"]
+1917190[shape=circle, label="xml, buzzword, parsing"]
+1917160[shape=circle, label="readable, human, json"]
+1917351[shape=circle, label="language, data, dynamicallytyped"]
+1917134[shape=circle, label="serialization, write, types"]
+1917020[shape=circle, label="creating, version, json"]
+1916964[shape=circle, label="proved, no"]
+1916924[shape=circle, label="{name, n, bar1"]
+1916773[shape=circle, label="json, elementsobjects, differentiate"]
+1916746[shape=circle, label="better, example, data"]
+1916724[shape=circle, label="data, foo1, json"]
+1916983[shape=circle, label="words, hopes, seen"]
+1916892[shape=circle, label="data, xml, where"]
+1921906[shape=circle, label="json, xml, started"]
+1917200[shape=circle, label="orgwikiedifact#example, wikipedia, often"]
+1916370[shape=circle, label="interchange, format, xml"]
+1916312[shape=circle, label="example, useful"]
+1917330[shape=circle, label="orgwikijson_datatype_gsoc_2010, postgresql, relnofollowhttpwiki"]
+1916614[shape=circle, label="xml, postgresqls, relational"]
+1916757[shape=circle, label="xml, surprisingly, mainframe"]
+1916413[shape=circle, label="json, xml, com"]
+1917306[shape=circle, label="remember, submission, ditching"]
+1916655[shape=circle, label="orgftpschemesxml, html, relnofollowhttpokmij"]
+1917171[shape=circle, label="semistructured, unstructured, argument"]
+1916988[shape=circle, label="&#60omgthisissohumanreadableicannotbelieveit&#621&#60omgthisissohumanreadableicannotbelieveit&#62good, riddance"]
+1917175[shape=circle, label="semistructured, unstructured, argument"]
+1916133[shape=circle, label="deprecating, xml"]
+1916457->1916571
+1916379->1916457
+1916671->1917137
+1916671->1917453
+1916379->1916671
+1917278->1920019
+1916666->1917278
+1916379->1916666
+1916133->1916379
+1916636->1917459
+1916636->1917964
+1916611->1916636
+1917298->1917602
+1917181->1917298
+1916737->1917181
+1916611->1916737
+1916382->1916611
+1916319->1916382
+1916319->1916352
+1917068->1918120
+1916739->1917068
+1916319->1916739
+1917273->1925632
+1917216->1917273
+1917185->1917216
+1916797->1917185
+1916532->1916797
+1916319->1916532
+1916480->1916515
+1916377->1916480
+1916377->1918384
+1916337->1916377
+1916319->1916337
+1916133->1916319
+1916588->1917314
+1916566->1916588
+1916396->1916566
+1916368->1916396
+1917561->1918054
+1916368->1917561
+1916368->1916799
+1916334->1916368
+1916133->1916334
+1916716->1916847
+1916527->1916716
+1916527->1917479
+1916133->1916527
+1925583->1935660
+1920836->1925583
+1920675->1920836
+1917301->1920675
+1917244->1917301
+1920753->1924968
+1917469->1920753
+1917244->1917469
+1916453->1917244
+1916813->1919275
+1916453->1916813
+1916133->1916453
+1916133->1916970
+1917283->1917698
+1916482->1917283
+1916425->1916482
+1916133->1916425
+1916133->1916323
+1916133->1916429
+1916133->1916380
+1916133->1916612
+1917160->1917190
+1916133->1917160
+1917134->1917351
+1917020->1917134
+1916964->1917020
+1916924->1916964
+1916773->1916924
+1916746->1916773
+1916724->1916746
+1916133->1916724
+1916133->1916983
+1916133->1916892
+1916133->1921906
+1916370->1917200
+1916133->1916370
+1916133->1916312
+1916614->1917330
+1916133->1916614
+1916133->1916757
+1916133->1916413
+1916133->1917306
+1916133->1916655
+1916133->1917171
+1916133->1916988
+1916133->1917175
+}

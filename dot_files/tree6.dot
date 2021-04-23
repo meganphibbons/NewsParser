@@ -1,0 +1,33 @@
+digraph tree {
+6054055[shape=circle, label="tech, presidential, entrepreneur"]
+6052640[shape=circle, label="available, getting, changes"]
+6052346[shape=circle, label="data, &#x2f, format"]
+6052393[shape=circle, label="ethereal, content, really"]
+6051972[shape=circle, label="people&quotgiven, they&#x27re, importance"]
+6056066[shape=circle, label="data, gov, initiatives"]
+6051759[shape=circle, label="opinion, website, current"]
+6051723[shape=circle, label="accidentally, hugged, looks"]
+6051788[shape=circle, label="publish, site, data"]
+6051908[shape=circle, label="whitehouse, gov&#x2fblog&#x2f2013&#x2f07&#x2f15&#x2ffirstlooknextdat, govblog20130715firstlooknextdatagov"]
+6056164[shape=circle, label="data, healthdata, open"]
+6051905[shape=circle, label="healthdata, relnofollowhttp&#x2f&#x2fhub, hrefhttphub"]
+6056114[shape=circle, label="brought, servers, traffic"]
+6051718[shape=circle, label="connection&#x27, establishing, &#x27error"]
+6051419[shape=circle, label="relnofollowhttp&#x2f&#x2fsulia, hrefhttpsulia, com&#x2f"]
+6051377[shape=circle, label=""]
+6052346->6054055
+6052346->6052640
+6051377->6052346
+6051377->6052393
+6051377->6051972
+6051723->6056066
+6051723->6051759
+6051377->6051723
+6051377->6051788
+6051377->6051908
+6051905->6056164
+6051377->6051905
+6051718->6056114
+6051377->6051718
+6051377->6051419
+}

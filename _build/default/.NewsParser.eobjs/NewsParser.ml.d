@@ -1,1 +1,1 @@
-NewsParser.ml: JSONSamples NewsCrawler Parser Tree TreeSamples Visualizer
+NewsParser.ml: JSONSamples NewsCrawler Parser Tree Visualizer
