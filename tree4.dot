@@ -1,0 +1,147 @@
+digraph tree {
+9479[shape=circle, label="windows, linux, idea"]
+9272[shape=circle, label="file, online, docs"]
+9224[shape=circle, label="connectivity, account, drive"]
+8917[shape=circle, label="everyone, aaronsw, comwebloglazybackuphttpwww"]
+9235[shape=circle, label="cabinet, across, file"]
+9153[shape=circle, label="drop, box, download"]
+8952[shape=circle, label="usb, install, drive"]
+9217[shape=circle, label="comadyapubsosdi2002, microsoft, hrefhttpresearch"]
+9132[shape=circle, label="storage, system, can"]
+10343[shape=circle, label="storage, can, s3"]
+9124[shape=circle, label="storage, users, more"]
+9006[shape=circle, label="x, charging, making"]
+9001[shape=circle, label="per, going, s3"]
+8976[shape=circle, label="thinking, exactly, ashu"]
+8969[shape=circle, label="amazon, s3"]
+8958[shape=circle, label="users, filesystem, prepared"]
+9024[shape=circle, label="ftp, curlftpfs, programs"]
+9151[shape=circle, label="folder, automatically, dropbox"]
+9081[shape=circle, label="server, linux, dont"]
+9083[shape=circle, label="drewgetdropbox, offline, happy"]
+9073[shape=circle, label="youre, doing, windowsonly"]
+8892[shape=circle, label="web, linux, port"]
+8888[shape=circle, label="impressed, response, gottenn"]
+8884[shape=circle, label="applicant, thatalso, planning"]
+9707[shape=circle, label="application, encryption, entirely"]
+8889[shape=circle, label="before, passphrase, additional"]
+8887[shape=circle, label="code, comfortable, serverthats"]
+8960[shape=circle, label="people, technical, enough"]
+8949[shape=circle, label="product, cominvestors, paulgraham"]
+8869[shape=circle, label="features, launch, dropbox"]
+8940[shape=circle, label="coda, cmu, cs"]
+11003[shape=circle, label="insight, sharing, thanks"]
+9247[shape=circle, label="out, had, several"]
+8908[shape=circle, label="inspiration, demogreat, workable"]
+9034[shape=circle, label="agree, stuff, coda"]
+9005[shape=circle, label="office, congratsheres, suggestion"]
+8877[shape=circle, label="potential, luck, mate"]
+8875[shape=circle, label="gracefully, interface, computers"]
+8873[shape=circle, label="administrative, application, incorporate"]
+9671[shape=circle, label="people, video, too"]
+9353[shape=circle, label="people, idea, applying"]
+9324[shape=circle, label="believe, leader, need"]
+9205[shape=circle, label="yc, preexisting, guessing"]
+9097[shape=circle, label="represent, rejected, applied"]
+9067[shape=circle, label="youve, didnt, here"]
+9481[shape=circle, label="replicate, questions, answered"]
+9055[shape=circle, label="users, going, differentiate"]
+9007[shape=circle, label="mentioned, features, exactly"]
+8865[shape=circle, label="coming, port, mac"]
+8881[shape=circle, label="graphical, implement, problems"]
+8874[shape=circle, label="localnormal, background, photoshop"]
+8872[shape=circle, label="incorporate, sometimes, internet"]
+8955[shape=circle, label="originally, screencast, dropbox"]
+10403[shape=circle, label="trademark, dropbox, difficulties"]
+8903[shape=circle, label="scratches, thinking, dropbox"]
+8928[shape=circle, label="especially, rightclick, location"]
+9125[shape=circle, label="version, session, posted"]
+8998[shape=circle, label="definitely, qualifies, executed"]
+9245[shape=circle, label="gdrive, materialising, aquisition"]
+9031[shape=circle, label="post, probably, reliable"]
+9029[shape=circle, label="techcrunch, similar, storage"]
+8901[shape=circle, label="competitor, accepted, googles"]
+8902[shape=circle, label="tubesnow, hrefhttpwww, comhttpwww"]
+8907[shape=circle, label="business, product, demo"]
+8894[shape=circle, label="nice, drew, lets"]
+8870[shape=circle, label="thats, hot"]
+8878[shape=circle, label="impressed, im"]
+8980[shape=circle, label="stuff, hope, n"]
+8934[shape=circle, label="brilliant"]
+8945[shape=circle, label="coda, cmu, cs"]
+8943[shape=circle, label="laptop, modify, image"]
+8876[shape=circle, label=""]
+8863[shape=circle, label="dropbox, drive, throw, away, app"]
+9272->9479
+9224->9272
+8863->9224
+8863->8917
+9153->9235
+8952->9153
+8863->8952
+9132->9217
+8958->9132
+9124->10343
+9001->9124
+9001->9006
+8969->9001
+8969->8976
+8958->8969
+8863->8958
+8884->9024
+9081->9151
+8892->9081
+9073->9083
+8892->9073
+8884->8892
+8884->8888
+8863->8884
+8889->9707
+8887->8889
+8863->8887
+8949->8960
+8869->8949
+8863->8869
+8863->8940
+9247->11003
+8908->9247
+8863->8908
+9005->9034
+8863->9005
+8875->8877
+8873->8875
+8863->8873
+8863->9671
+9324->9353
+9205->9324
+9097->9205
+9067->9097
+8863->9067
+9055->9481
+8863->9055
+8865->9007
+8863->8865
+8863->8881
+8872->8874
+8863->8872
+8863->8955
+8863->10403
+8863->8903
+8863->8928
+8863->9125
+8863->8998
+9029->9245
+9029->9031
+8901->9029
+8863->8901
+8863->8902
+8863->8907
+8863->8894
+8863->8870
+8863->8878
+8863->8980
+8863->8934
+8943->8945
+8863->8943
+8863->8876
+}

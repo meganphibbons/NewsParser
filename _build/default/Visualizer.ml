@@ -1,13 +1,33 @@
 
 open Tree
 
+let num = ref 0
 
+let fresh = num := !num + 1; !num
 
 let to_dot_node (t: 'a tree) : string = match t with 
-  | Node x -> "{N"^(x.value)^"[label=\"" ^x.value^"\"]}"
-  | Leaf x ->      "{L"^(x)^"[shape=circle,label=\"" ^x^ "\"]}";;
- 
-let edge (n1: 'a tree ) (n2 : 'a tree ) : string = (to_dot_node n1)^"--"^(to_dot_node n2)^"\n";;
+  | Node x -> (string_of_int x.id) ^ "[shape=circle, label=\"" ^x.value^"\"]\n"
+  | Leaf (id,x) -> (string_of_int id) ^ "[shape=circle, label=\"" ^ x ^ "\"]\n";;
+  
+let node_id = function
+    | Node x -> x.id
+    | Leaf(id, _) -> id
+
+let edge (n1: 'a tree ) (n2 : 'a tree ) : string = (string_of_int (node_id n1)) ^ "->" ^ (string_of_int (node_id n2)) ^ "\n";;
+
+
+let rec tree_node_preamble t = 
+    match t with
+    | Leaf _ as leaf -> (to_dot_node leaf)
+    | Node node -> 
+    List.fold_left (fun acc h -> (tree_node_preamble h) ^ acc) (to_dot_node (Node node)) node.children
+;;
+
+let rec tree_node_connections t =
+    match t with
+    | Leaf _ as leaf -> ""
+    | Node node -> 
+    List.fold_left (fun acc h -> (tree_node_connections h) ^ (edge t h) ^ acc) "" node.children
 
 
 let rec length lst = 
@@ -15,62 +35,8 @@ let rec length lst =
   | [] -> 0
   | h::t -> 1 + (length t);;
 
-let rec tree_to_dot (acc : string) (t : 'a tree) : string = 
-  match t with 
-  | Leaf _ as leaf ->   acc ^ (to_dot_node leaf)
-  | Node node -> 
-    let mini curr_node = acc ^ (edge t curr_node) ^ (tree_to_dot acc curr_node) in
-    String.concat "" (List.map mini node.children);;
-  
-    (* for i = 0 to ((length node.children)-1) do 
-        let curr_node = (List.nth node.children i) in 
-            let acc ^ (edge t curr_node) ^ (tree_to_dot acc curr_node)
-        (* (let _ = acc ^ (edge t curr_node)
-        let _ = tree_to_dot acc curr_node
-        ) *)
-    done;; *)
-        
-            (* s^(tree_to_dot acc n.children.nth(i))
-  | Node( (Node (_,_,_) as n) , _,  (Leaf _ as leaf)) 
-  | Node( Leaf _ as leaf, _, (Node (_,_,_) as n))     ->
-      (edge t n) ^ (edge t leaf) ^(tree_to_dot acc n)
-  | Node( ( Node(_,_,_)  as n) , _,  Empty)
-  | Node( Empty, _, (Node(_,_,_) as n))    ->
-      (edge t n) ^ (tree_to_dot acc n)
-  | Node( ( Leaf _  as leaf), _, Empty) 
-  | Node( Empty, _,(Leaf _ as leaf))   -> 
-      (edge t leaf) 
-  | Node( (Leaf _ as left), _, (Leaf _ as right)) ->
-      (edge t left) ^ (edge t right)
-  | Node( Empty, _, Empty) ->
-      acc
-  | Node( (Node (_,_,_) as nl) , _, (Node(_,_,_) as nr)) -> 
-      (edge t nl)^(edge t nr)^(tree_to_dot acc nl)^(tree_to_dot acc nr);; *)
-
-(* let rec tree_to_dot (acc : string) (t : 'a tree) : string = 
-  match t with 
-  | Empty -> acc
-  | Leaf _ as leaf ->   acc ^ (to_dot_node leaf)
-  | Node( (Node (_,_,_) as n) , _,  (Leaf _ as leaf)) 
-  | Node( Leaf _ as leaf, _, (Node (_,_,_) as n))     ->
-      (edge t n) ^ (edge t leaf) ^(tree_to_dot acc n)
-  | Node( ( Node(_,_,_)  as n) , _,  Empty)
-  | Node( Empty, _, (Node(_,_,_) as n))    ->
-      (edge t n) ^ (tree_to_dot acc n)
-  | Node( ( Leaf _  as leaf), _, Empty) 
-  | Node( Empty, _,(Leaf _ as leaf))   -> 
-      (edge t leaf) 
-  | Node( (Leaf _ as left), _, (Leaf _ as right)) ->
-      (edge t left) ^ (edge t right)
-  | Node( Empty, _, Empty) ->
-      acc
-  | Node( (Node (_,_,_) as nl) , _, (Node(_,_,_) as nr)) -> 
-      (edge t nl)^(edge t nr)^(tree_to_dot acc nl)^(tree_to_dot acc nr);; *)
-
 let tree_to_dotfile t file = 
-  let dot_tree = "graph tree {\n"^(tree_to_dot " " t)^"}" in
+  let dot_tree = "digraph tree {\n"^( tree_node_preamble t) ^ (tree_node_connections t) ^ "}" in
   let channel = open_out file in
   output_string channel dot_tree;
   close_out channel;;
-
-
