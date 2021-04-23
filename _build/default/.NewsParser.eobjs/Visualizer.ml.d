@@ -1,1 +1,1 @@
-Visualizer.ml: List String Tree
+Visualizer.ml: List Tree

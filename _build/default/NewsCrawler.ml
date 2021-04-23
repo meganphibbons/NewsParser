@@ -59,6 +59,6 @@ let rec build_json_tree id =
   let curr = Lwt_main.run (get_item_from_id id) in 
   let curr_json = parse (curr) in
   match curr_json.kids, get_keywords_from_json(curr_json) with
-  | Some kids, Some keywords -> Node {value = keywords; children = List.map build_json_tree kids}
-  | None, Some keywords -> Leaf keywords
+  | Some kids, Some keywords -> Node {id=id; value = keywords; children = List.map build_json_tree kids}
+  | None, Some keywords -> Leaf (id,keywords)
 
