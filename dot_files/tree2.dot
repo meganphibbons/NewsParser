@@ -1,0 +1,37 @@
+digraph tree {
+121565[shape=circle, label="vote, nonfluff, site"]
+121522[shape=circle, label="change, citizenshipmembership, rulesadministering"]
+121471[shape=circle, label="fluff, upvoting, suggest"]
+121349[shape=circle, label="users, determined, fluffers"]
+122395[shape=circle, label="page, stories, those"]
+121286[shape=circle, label="stories, conversation, before"]
+121132[shape=circle, label="selfserving, irrelevant, understand"]
+121108[shape=circle, label="relevant, stories, users"]
+121303[shape=circle, label="quality, popularity, problematic"]
+121154[shape=circle, label="people, interested, overlords"]
+121016[shape=circle, label="users, comitemid120816, comimagesnews"]
+122396[shape=circle, label="more, programming, seems"]
+121134[shape=circle, label="NONE"]
+121109[shape=circle, label="wikipedia, olds, 14"]
+121216[shape=circle, label="log10karma, recommend, sqrtkarma"]
+121242[shape=circle, label="community, encourage, probably"]
+121168[shape=circle, label="encourage, voters, weight"]
+121003[shape=circle, label="hn, whats, im"]
+121471->121565
+121471->121522
+121349->121471
+121016->121349
+121286->122395
+121132->121286
+121108->121132
+121016->121108
+121016->121303
+121016->121154
+121003->121016
+121109->122396
+121109->121134
+121003->121109
+121168->121216
+121168->121242
+121003->121168
+}

@@ -14,10 +14,15 @@ open TreeSamples
 
 (* Main Function *)
 let () = 
-  print_keywords json1 5;
-  print_keywords json2 4;
-
   let root = build_json_tree 8863 in
   print_tree 0 root;
-  tree_to_dotfile root "tree.dot"
+  tree_to_dotfile root "dot_files/tree.dot";
+
+  let root1 = build_json_tree 192327 in
+  print_tree 0 root;
+  tree_to_dotfile root1 "dot_files/tree1.dot";
+
+  let root2 = build_json_tree 121003 in
+  print_tree 0 root;
+  tree_to_dotfile root2 "dot_files/tree2.dot"
 ;;
