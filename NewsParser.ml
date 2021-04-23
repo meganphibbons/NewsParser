@@ -16,7 +16,8 @@ open TreeSamples
 let () = 
   print_keywords json1 5;
   print_keywords json2 4;
-  tree_to_dotfile t1 "tree.dot";
+
   let root = build_json_tree 8863 in
-  print_tree 0 root
+  print_tree 0 root;
+  tree_to_dotfile root "tree2.dot"
 ;;
