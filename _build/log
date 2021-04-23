@@ -1,0 +1,134 @@
+# dune exec ./NewsParser.exe
+# OCAMLPARAM: unset
+# Workspace root: /Users/annielu/Desktop/TwitterParser
+$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/62/m_ylbj0x4j52fpm69fjdn14r0000gn/T/dune080cc1.output 2> /dev/null
+# Auto-detected concurrency: 4
+# disable binary cache
+$ /Users/annielu/.opam/default/bin/ocamlc.opt -config > /var/folders/62/m_ylbj0x4j52fpm69fjdn14r0000gn/T/dune70304f.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/annielu/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/Users/annielu/.opam/default/bin"
+#  ; ocaml = Ok External "/Users/annielu/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/Users/annielu/.opam/default/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/annielu/.opam/default/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/annielu/.opam/default/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/annielu/.opam/default/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/annielu/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/annielu/.opam/default/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/annielu/Desktop/TwitterParser"
+#        ; "INSIDE_DUNE" :
+#            "/Users/annielu/Desktop/TwitterParser/_build/default"
+#        ; "MANPATH" :
+#            "/Users/annielu/Desktop/TwitterParser/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/annielu/Desktop/TwitterParser/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/annielu/Desktop/TwitterParser/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/annielu/Desktop/TwitterParser/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/annielu/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/annielu/.opam/default/lib/ocaml"
+#      ; standard_library = "/Users/annielu/.opam/default/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.3.0"
+#      ; target = "x86_64-apple-darwin20.3.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+# Workspace root: /Users/annielu/Desktop/TwitterParser
+$ (cd _build/default && /Users/annielu/.opam/default/bin/ocamldep.opt -modules -impl Visualizer.ml) > _build/default/.NewsParser.eobjs/Visualizer.ml.d
+$ (cd _build/default && /Users/annielu/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .NewsParser.eobjs/byte -I /Users/annielu/.opam/default/lib/angstrom -I /Users/annielu/.opam/default/lib/astring -I /Users/annielu/.opam/default/lib/base/caml -I /Users/annielu/.opam/default/lib/base64 -I /Users/annielu/.opam/default/lib/bigarray-compat -I /Users/annielu/.opam/default/lib/bigstringaf -I /Users/annielu/.opam/default/lib/bytes -I /Users/annielu/.opam/default/lib/cohttp -I /Users/annielu/.opam/default/lib/cohttp-lwt -I /Users/annielu/.opam/default/lib/cohttp-lwt-unix -I /Users/annielu/.opam/default/lib/conduit -I /Users/annielu/.opam/default/lib/conduit-lwt -I /Users/annielu/.opam/default/lib/conduit-lwt-unix -I /Users/annielu/.opam/default/lib/domain-name -I /Users/annielu/.opam/default/lib/fmt -I /Users/annielu/.opam/default/lib/ipaddr -I /Users/annielu/.opam/default/lib/ipaddr-sexp -I /Users/annielu/.opam/default/lib/ipaddr/unix -I /Users/annielu/.opam/default/lib/logs -I /Users/annielu/.opam/default/lib/lwt -I /Users/annielu/.opam/default/lib/lwt/unix -I /Users/annielu/.opam/default/lib/lwt_ssl -I /Users/annielu/.opam/default/lib/macaddr -I /Users/annielu/.opam/default/lib/magic-mime -I /Users/annielu/.opam/default/lib/mmap -I /Users/annielu/.opam/default/lib/ocaml/threads -I /Users/annielu/.opam/default/lib/ocplib-endian -I /Users/annielu/.opam/default/lib/ocplib-endian/bigstring -I /Users/annielu/.opam/default/lib/parsexp -I /Users/annielu/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/annielu/.opam/default/lib/re -I /Users/annielu/.opam/default/lib/result -I /Users/annielu/.opam/default/lib/seq -I /Users/annielu/.opam/default/lib/sexplib -I /Users/annielu/.opam/default/lib/sexplib0 -I /Users/annielu/.opam/default/lib/ssl -I /Users/annielu/.opam/default/lib/stdlib-shims -I /Users/annielu/.opam/default/lib/stringext -I /Users/annielu/.opam/default/lib/uri -I /Users/annielu/.opam/default/lib/uri-sexp -I /Users/annielu/.opam/default/lib/uri/services -no-alias-deps -opaque -open Dune__exe -o .NewsParser.eobjs/byte/dune__exe__Visualizer.cmo -c -impl Visualizer.ml)
+> File "Visualizer.ml", line 16, characters 4-5:
+> 16 |   | h::t -> 1 + (length t);;
+>          ^
+> Warning 27 [unused-var-strict]: unused variable h.
+$ (cd _build/default && /Users/annielu/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .NewsParser.eobjs/byte -I /Users/annielu/.opam/default/lib/angstrom -I /Users/annielu/.opam/default/lib/astring -I /Users/annielu/.opam/default/lib/base/caml -I /Users/annielu/.opam/default/lib/base64 -I /Users/annielu/.opam/default/lib/bigarray-compat -I /Users/annielu/.opam/default/lib/bigstringaf -I /Users/annielu/.opam/default/lib/bytes -I /Users/annielu/.opam/default/lib/cohttp -I /Users/annielu/.opam/default/lib/cohttp-lwt -I /Users/annielu/.opam/default/lib/cohttp-lwt-unix -I /Users/annielu/.opam/default/lib/conduit -I /Users/annielu/.opam/default/lib/conduit-lwt -I /Users/annielu/.opam/default/lib/conduit-lwt-unix -I /Users/annielu/.opam/default/lib/domain-name -I /Users/annielu/.opam/default/lib/fmt -I /Users/annielu/.opam/default/lib/ipaddr -I /Users/annielu/.opam/default/lib/ipaddr-sexp -I /Users/annielu/.opam/default/lib/ipaddr/unix -I /Users/annielu/.opam/default/lib/logs -I /Users/annielu/.opam/default/lib/lwt -I /Users/annielu/.opam/default/lib/lwt/unix -I /Users/annielu/.opam/default/lib/lwt_ssl -I /Users/annielu/.opam/default/lib/macaddr -I /Users/annielu/.opam/default/lib/magic-mime -I /Users/annielu/.opam/default/lib/mmap -I /Users/annielu/.opam/default/lib/ocaml/threads -I /Users/annielu/.opam/default/lib/ocplib-endian -I /Users/annielu/.opam/default/lib/ocplib-endian/bigstring -I /Users/annielu/.opam/default/lib/parsexp -I /Users/annielu/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/annielu/.opam/default/lib/re -I /Users/annielu/.opam/default/lib/result -I /Users/annielu/.opam/default/lib/seq -I /Users/annielu/.opam/default/lib/sexplib -I /Users/annielu/.opam/default/lib/sexplib0 -I /Users/annielu/.opam/default/lib/ssl -I /Users/annielu/.opam/default/lib/stdlib-shims -I /Users/annielu/.opam/default/lib/stringext -I /Users/annielu/.opam/default/lib/uri -I /Users/annielu/.opam/default/lib/uri-sexp -I /Users/annielu/.opam/default/lib/uri/services -no-alias-deps -opaque -open Dune__exe -o .NewsParser.eobjs/byte/dune__exe__NewsParser.cmo -c -impl NewsParser.ml)
+> File "NewsParser.ml", line 12, characters 0-16:
+> 12 | open TreeSamples
+>      ^^^^^^^^^^^^^^^^
+> Warning 33 [unused-open]: unused open Dune__exe.TreeSamples.
+$ (cd _build/default && /Users/annielu/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .NewsParser.eobjs/byte -I .NewsParser.eobjs/native -I /Users/annielu/.opam/default/lib/angstrom -I /Users/annielu/.opam/default/lib/astring -I /Users/annielu/.opam/default/lib/base/caml -I /Users/annielu/.opam/default/lib/base64 -I /Users/annielu/.opam/default/lib/bigarray-compat -I /Users/annielu/.opam/default/lib/bigstringaf -I /Users/annielu/.opam/default/lib/bytes -I /Users/annielu/.opam/default/lib/cohttp -I /Users/annielu/.opam/default/lib/cohttp-lwt -I /Users/annielu/.opam/default/lib/cohttp-lwt-unix -I /Users/annielu/.opam/default/lib/conduit -I /Users/annielu/.opam/default/lib/conduit-lwt -I /Users/annielu/.opam/default/lib/conduit-lwt-unix -I /Users/annielu/.opam/default/lib/domain-name -I /Users/annielu/.opam/default/lib/fmt -I /Users/annielu/.opam/default/lib/ipaddr -I /Users/annielu/.opam/default/lib/ipaddr-sexp -I /Users/annielu/.opam/default/lib/ipaddr/unix -I /Users/annielu/.opam/default/lib/logs -I /Users/annielu/.opam/default/lib/lwt -I /Users/annielu/.opam/default/lib/lwt/unix -I /Users/annielu/.opam/default/lib/lwt_ssl -I /Users/annielu/.opam/default/lib/macaddr -I /Users/annielu/.opam/default/lib/magic-mime -I /Users/annielu/.opam/default/lib/mmap -I /Users/annielu/.opam/default/lib/ocaml/threads -I /Users/annielu/.opam/default/lib/ocplib-endian -I /Users/annielu/.opam/default/lib/ocplib-endian/bigstring -I /Users/annielu/.opam/default/lib/parsexp -I /Users/annielu/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/annielu/.opam/default/lib/re -I /Users/annielu/.opam/default/lib/result -I /Users/annielu/.opam/default/lib/seq -I /Users/annielu/.opam/default/lib/sexplib -I /Users/annielu/.opam/default/lib/sexplib0 -I /Users/annielu/.opam/default/lib/ssl -I /Users/annielu/.opam/default/lib/stdlib-shims -I /Users/annielu/.opam/default/lib/stringext -I /Users/annielu/.opam/default/lib/uri -I /Users/annielu/.opam/default/lib/uri-sexp -I /Users/annielu/.opam/default/lib/uri/services -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o .NewsParser.eobjs/native/dune__exe__NewsParser.cmx -c -impl NewsParser.ml)
+> File "NewsParser.ml", line 12, characters 0-16:
+> 12 | open TreeSamples
+>      ^^^^^^^^^^^^^^^^
+> Warning 33 [unused-open]: unused open Dune__exe.TreeSamples.
+$ (cd _build/default && /Users/annielu/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .NewsParser.eobjs/byte -I .NewsParser.eobjs/native -I /Users/annielu/.opam/default/lib/angstrom -I /Users/annielu/.opam/default/lib/astring -I /Users/annielu/.opam/default/lib/base/caml -I /Users/annielu/.opam/default/lib/base64 -I /Users/annielu/.opam/default/lib/bigarray-compat -I /Users/annielu/.opam/default/lib/bigstringaf -I /Users/annielu/.opam/default/lib/bytes -I /Users/annielu/.opam/default/lib/cohttp -I /Users/annielu/.opam/default/lib/cohttp-lwt -I /Users/annielu/.opam/default/lib/cohttp-lwt-unix -I /Users/annielu/.opam/default/lib/conduit -I /Users/annielu/.opam/default/lib/conduit-lwt -I /Users/annielu/.opam/default/lib/conduit-lwt-unix -I /Users/annielu/.opam/default/lib/domain-name -I /Users/annielu/.opam/default/lib/fmt -I /Users/annielu/.opam/default/lib/ipaddr -I /Users/annielu/.opam/default/lib/ipaddr-sexp -I /Users/annielu/.opam/default/lib/ipaddr/unix -I /Users/annielu/.opam/default/lib/logs -I /Users/annielu/.opam/default/lib/lwt -I /Users/annielu/.opam/default/lib/lwt/unix -I /Users/annielu/.opam/default/lib/lwt_ssl -I /Users/annielu/.opam/default/lib/macaddr -I /Users/annielu/.opam/default/lib/magic-mime -I /Users/annielu/.opam/default/lib/mmap -I /Users/annielu/.opam/default/lib/ocaml/threads -I /Users/annielu/.opam/default/lib/ocplib-endian -I /Users/annielu/.opam/default/lib/ocplib-endian/bigstring -I /Users/annielu/.opam/default/lib/parsexp -I /Users/annielu/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/annielu/.opam/default/lib/re -I /Users/annielu/.opam/default/lib/result -I /Users/annielu/.opam/default/lib/seq -I /Users/annielu/.opam/default/lib/sexplib -I /Users/annielu/.opam/default/lib/sexplib0 -I /Users/annielu/.opam/default/lib/ssl -I /Users/annielu/.opam/default/lib/stdlib-shims -I /Users/annielu/.opam/default/lib/stringext -I /Users/annielu/.opam/default/lib/uri -I /Users/annielu/.opam/default/lib/uri-sexp -I /Users/annielu/.opam/default/lib/uri/services -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o .NewsParser.eobjs/native/dune__exe__Visualizer.cmx -c -impl Visualizer.ml)
+> File "Visualizer.ml", line 16, characters 4-5:
+> 16 |   | h::t -> 1 + (length t);;
+>          ^
+> Warning 27 [unused-var-strict]: unused variable h.
+$ (cd _build/default && /Users/annielu/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -o NewsParser.exe /Users/annielu/.opam/default/lib/ocaml/str.cmxa -I /Users/annielu/.opam/default/lib/ocaml /Users/annielu/.opam/default/lib/result/result.cmxa /Users/annielu/.opam/default/lib/lwt/lwt.cmxa /Users/annielu/.opam/default/lib/re/re.cmxa /Users/annielu/.opam/default/lib/stringext/stringext.cmxa /Users/annielu/.opam/default/lib/bigarray-compat/bigarray_compat.cmxa /Users/annielu/.opam/default/lib/bigstringaf/bigstringaf.cmxa -I /Users/annielu/.opam/default/lib/bigstringaf /Users/annielu/.opam/default/lib/angstrom/angstrom.cmxa /Users/annielu/.opam/default/lib/uri/uri.cmxa /Users/annielu/.opam/default/lib/sexplib0/sexplib0.cmxa /Users/annielu/.opam/default/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /Users/annielu/.opam/default/lib/uri-sexp/uri_sexp.cmxa /Users/annielu/.opam/default/lib/base64/base64.cmxa /Users/annielu/.opam/default/lib/cohttp/cohttp.cmxa /Users/annielu/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/annielu/.opam/default/lib/fmt/fmt.cmxa /Users/annielu/.opam/default/lib/logs/logs.cmxa /Users/annielu/.opam/default/lib/logs/logs_lwt.cmxa /Users/annielu/.opam/default/lib/ocaml/unix.cmxa -I /Users/annielu/.opam/default/lib/ocaml /Users/annielu/.opam/default/lib/ocaml/bigarray.cmxa -I /Users/annielu/.opam/default/lib/ocaml /Users/annielu/.opam/default/lib/base/caml/caml.cmxa /Users/annielu/.opam/default/lib/parsexp/parsexp.cmxa /Users/annielu/.opam/default/lib/sexplib/sexplib.cmxa /Users/annielu/.opam/default/lib/macaddr/macaddr.cmxa /Users/annielu/.opam/default/lib/astring/astring.cmxa /Users/annielu/.opam/default/lib/domain-name/domain_name.cmxa /Users/annielu/.opam/default/lib/ipaddr/ipaddr.cmxa /Users/annielu/.opam/default/lib/ipaddr-sexp/ipaddr_sexp.cmxa /Users/annielu/.opam/default/lib/conduit/conduit.cmxa /Users/annielu/.opam/default/lib/conduit-lwt/conduit_lwt.cmxa /Users/annielu/.opam/default/lib/magic-mime/magic_mime_library.cmxa /Users/annielu/.opam/default/lib/mmap/mmap.cmxa /Users/annielu/.opam/default/lib/ocplib-endian/ocplib_endian.cmxa /Users/annielu/.opam/default/lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cmxa /Users/annielu/.opam/default/lib/ocaml/threads/threads.cmxa -I /Users/annielu/.opam/default/lib/ocaml /Users/annielu/.opam/default/lib/lwt/unix/lwt_unix.cmxa -I /Users/annielu/.opam/default/lib/lwt/unix /Users/annielu/.opam/default/lib/uri/services/uri_services.cmxa /Users/annielu/.opam/default/lib/ipaddr/unix/ipaddr_unix.cmxa /Users/annielu/.opam/default/lib/ssl/ssl.cmxa -I /Users/annielu/.opam/default/lib/ssl /Users/annielu/.opam/default/lib/lwt_ssl/lwt_ssl.cmxa /Users/annielu/.opam/default/lib/conduit-lwt-unix/conduit_lwt_unix.cmxa /Users/annielu/.opam/default/lib/cohttp-lwt/cohttp_lwt.cmxa /Users/annielu/.opam/default/lib/logs/logs_fmt.cmxa /Users/annielu/.opam/default/lib/cohttp-lwt-unix/cohttp_lwt_unix.cmxa .NewsParser.eobjs/native/dune__exe.cmx .NewsParser.eobjs/native/dune__exe__AvoidedWords.cmx .NewsParser.eobjs/native/dune__exe__JSONSamples.cmx .NewsParser.eobjs/native/dune__exe__Utility.cmx .NewsParser.eobjs/native/dune__exe__KeywordGenerator.cmx .NewsParser.eobjs/native/dune__exe__Tokens.cmx .NewsParser.eobjs/native/dune__exe__Parser.cmx .NewsParser.eobjs/native/dune__exe__Tree.cmx .NewsParser.eobjs/native/dune__exe__NewsCrawler.cmx .NewsParser.eobjs/native/dune__exe__TreeSamples.cmx .NewsParser.eobjs/native/dune__exe__Visualizer.cmx .NewsParser.eobjs/native/dune__exe__NewsParser.cmx)

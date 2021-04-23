@@ -1,8 +1,0 @@
-graph tree {
-{N3[label="3"]}--{N1[label="1"]}
-{N3[label="3"]}--{N5[label="5"]}
-{N1[label="1"]}--{L0[shape=circle,label="0"]}
-{N1[label="1"]}--{L2[shape=circle,label="2"]}
-{N5[label="5"]}--{L4[shape=circle,label="4"]}
-{N5[label="5"]}--{L6[shape=circle,label="6"]}
-}
